@@ -1,0 +1,49 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '10.0'
+workspace 'Prover'
+
+def common_pods
+  pod 'Moya'
+  pod 'PromiseKit'
+  pod 'ReachabilitySwift'
+  pod 'TPKeyboardAvoiding'
+  pod 'SwiftLint'
+end
+
+target 'Common' do
+  project 'Common/Common.xcodeproj'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  common_pods
+end
+
+target 'Clapperboard' do
+  project 'Clapperboard/Clapperboard.xcodeproj'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  common_pods
+  pod 'BigInt'
+end
+
+target 'SwypeDetectorWrapper' do
+  project 'SwypeDetectorWrapper/SwypeDetectorWrapper.xcodeproj'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'OpenCV'
+end
+
+target 'Swype' do
+  project 'Swype/Swype.xcodeproj'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  common_pods
+  pod 'OpenCV'
+end

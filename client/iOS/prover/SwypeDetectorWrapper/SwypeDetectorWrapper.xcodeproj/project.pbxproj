@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A58AAEB21A839F900BEFE13 /* BoundsChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AADF21A839F900BEFE13 /* BoundsChecker.cpp */; };
+		1A58AAEC21A839F900BEFE13 /* common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE021A839F900BEFE13 /* common.cpp */; };
+		1A58AAED21A839F900BEFE13 /* SwypeCodeDetectorDelta.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE121A839F900BEFE13 /* SwypeCodeDetectorDelta.cpp */; };
+		1A58AAEE21A839F900BEFE13 /* VectorExplained.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE221A839F900BEFE13 /* VectorExplained.cpp */; };
+		1A58AAEF21A839F900BEFE13 /* ShiftDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE321A839F900BEFE13 /* ShiftDetector.cpp */; };
+		1A58AAF021A839F900BEFE13 /* CircleDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE421A839F900BEFE13 /* CircleDetector.cpp */; };
+		1A58AAF121A839F900BEFE13 /* SwypeCodeDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE521A839F900BEFE13 /* SwypeCodeDetector.cpp */; };
+		1A58AAF221A839F900BEFE13 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE621A839F900BEFE13 /* Vector.cpp */; };
+		1A58AAF321A839F900BEFE13 /* Histogram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE721A839F900BEFE13 /* Histogram.cpp */; };
+		1A58AAF421A839F900BEFE13 /* SwypeCodeDetectorBaseFrame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE821A839F900BEFE13 /* SwypeCodeDetectorBaseFrame.cpp */; };
+		1A58AAF521A839F900BEFE13 /* SwypeStepDetector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAE921A839F900BEFE13 /* SwypeStepDetector.cpp */; };
+		1A58AAF621A839F900BEFE13 /* swype_detect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A58AAEA21A839F900BEFE13 /* swype_detect.cpp */; };
+		1A762BF521A32DDE00CEDA2A /* SwypeDetectorWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A762BF421A32DDE00CEDA2A /* SwypeDetectorWrapper.mm */; };
+		1A762BF621A32DDE00CEDA2A /* SwypeDetectorWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1A762BF321A32DDE00CEDA2A /* SwypeDetectorWrapper.h */; };
+		634FB9ED18FA181B805E8C43 /* Pods_SwypeDetectorWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D663F8ABBE7E3F610A48C9 /* Pods_SwypeDetectorWrapper.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A762BEE21A32DDE00CEDA2A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				1A762BF621A32DDE00CEDA2A /* SwypeDetectorWrapper.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		14A21B5C31977A784BD6CE7D /* Pods-SwypeDetectorWrapper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwypeDetectorWrapper.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SwypeDetectorWrapper/Pods-SwypeDetectorWrapper.release.xcconfig"; sourceTree = "<group>"; };
+		1A58AAC721A839E400BEFE13 /* DetectorState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectorState.h; sourceTree = "<group>"; };
+		1A58AAC821A839E400BEFE13 /* SwypeCodeDetectorBaseFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwypeCodeDetectorBaseFrame.h; sourceTree = "<group>"; };
+		1A58AAC921A839E400BEFE13 /* DebugComparer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugComparer.h; sourceTree = "<group>"; };
+		1A58AACA21A839E400BEFE13 /* settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settings.h; sourceTree = "<group>"; };
+		1A58AACB21A839E400BEFE13 /* CircleDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleDetector.h; sourceTree = "<group>"; };
+		1A58AACC21A839E400BEFE13 /* DetectorParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetectorParameters.h; sourceTree = "<group>"; };
+		1A58AACD21A839E400BEFE13 /* SwypeCodeDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwypeCodeDetector.h; sourceTree = "<group>"; };
+		1A58AACE21A839E400BEFE13 /* swype_detect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = swype_detect.h; sourceTree = "<group>"; };
+		1A58AACF21A839E400BEFE13 /* Area.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Area.h; sourceTree = "<group>"; };
+		1A58AAD021A839E400BEFE13 /* Perimeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perimeter.h; sourceTree = "<group>"; };
+		1A58AAD121A839E400BEFE13 /* ColoredQuantum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredQuantum.h; sourceTree = "<group>"; };
+		1A58AAD221A839E400BEFE13 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		1A58AAD321A839E400BEFE13 /* ShiftDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShiftDetector.h; sourceTree = "<group>"; };
+		1A58AAD421A839E400BEFE13 /* GaussianWindowCalc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaussianWindowCalc.h; sourceTree = "<group>"; };
+		1A58AAD521A839E400BEFE13 /* VectorExplained.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VectorExplained.h; sourceTree = "<group>"; };
+		1A58AAD621A839E400BEFE13 /* SwipeCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeCode.h; sourceTree = "<group>"; };
+		1A58AAD721A839E400BEFE13 /* Histogram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Histogram.h; sourceTree = "<group>"; };
+		1A58AAD821A839E400BEFE13 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		1A58AAD921A839E400BEFE13 /* BoundsChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundsChecker.h; sourceTree = "<group>"; };
+		1A58AADA21A839E400BEFE13 /* SwypeCodeDetectorDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwypeCodeDetectorDelta.h; sourceTree = "<group>"; };
+		1A58AADB21A839E400BEFE13 /* ValueWithDefect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueWithDefect.h; sourceTree = "<group>"; };
+		1A58AADC21A839E400BEFE13 /* SwypeStepDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwypeStepDetector.h; sourceTree = "<group>"; };
+		1A58AADF21A839F900BEFE13 /* BoundsChecker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundsChecker.cpp; sourceTree = "<group>"; };
+		1A58AAE021A839F900BEFE13 /* common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = common.cpp; sourceTree = "<group>"; };
+		1A58AAE121A839F900BEFE13 /* SwypeCodeDetectorDelta.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SwypeCodeDetectorDelta.cpp; sourceTree = "<group>"; };
+		1A58AAE221A839F900BEFE13 /* VectorExplained.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VectorExplained.cpp; sourceTree = "<group>"; };
+		1A58AAE321A839F900BEFE13 /* ShiftDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShiftDetector.cpp; sourceTree = "<group>"; };
+		1A58AAE421A839F900BEFE13 /* CircleDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CircleDetector.cpp; sourceTree = "<group>"; };
+		1A58AAE521A839F900BEFE13 /* SwypeCodeDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SwypeCodeDetector.cpp; sourceTree = "<group>"; };
+		1A58AAE621A839F900BEFE13 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		1A58AAE721A839F900BEFE13 /* Histogram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Histogram.cpp; sourceTree = "<group>"; };
+		1A58AAE821A839F900BEFE13 /* SwypeCodeDetectorBaseFrame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SwypeCodeDetectorBaseFrame.cpp; sourceTree = "<group>"; };
+		1A58AAE921A839F900BEFE13 /* SwypeStepDetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SwypeStepDetector.cpp; sourceTree = "<group>"; };
+		1A58AAEA21A839F900BEFE13 /* swype_detect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = swype_detect.cpp; sourceTree = "<group>"; };
+		1A762BF021A32DDE00CEDA2A /* libSwypeDetectorWrapper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSwypeDetectorWrapper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A762BF321A32DDE00CEDA2A /* SwypeDetectorWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwypeDetectorWrapper.h; sourceTree = "<group>"; };
+		1A762BF421A32DDE00CEDA2A /* SwypeDetectorWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SwypeDetectorWrapper.mm; sourceTree = "<group>"; };
+		368B33AB9072D3DCA5CB735C /* Pods-SwypeDetectorWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwypeDetectorWrapper.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SwypeDetectorWrapper/Pods-SwypeDetectorWrapper.debug.xcconfig"; sourceTree = "<group>"; };
+		76D663F8ABBE7E3F610A48C9 /* Pods_SwypeDetectorWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwypeDetectorWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A762BED21A32DDE00CEDA2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				634FB9ED18FA181B805E8C43 /* Pods_SwypeDetectorWrapper.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A58AAC521A839E400BEFE13 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				1A58AAC621A839E400BEFE13 /* swype */,
+			);
+			name = include;
+			path = "../../../../videoanalytics-public/include";
+			sourceTree = "<group>";
+		};
+		1A58AAC621A839E400BEFE13 /* swype */ = {
+			isa = PBXGroup;
+			children = (
+				1A58AAC721A839E400BEFE13 /* DetectorState.h */,
+				1A58AAC821A839E400BEFE13 /* SwypeCodeDetectorBaseFrame.h */,
+				1A58AAC921A839E400BEFE13 /* DebugComparer.h */,
+				1A58AACA21A839E400BEFE13 /* settings.h */,
+				1A58AACB21A839E400BEFE13 /* CircleDetector.h */,
+				1A58AACC21A839E400BEFE13 /* DetectorParameters.h */,
+				1A58AACD21A839E400BEFE13 /* SwypeCodeDetector.h */,
+				1A58AACE21A839E400BEFE13 /* swype_detect.h */,
+				1A58AACF21A839E400BEFE13 /* Area.h */,
+				1A58AAD021A839E400BEFE13 /* Perimeter.h */,
+				1A58AAD121A839E400BEFE13 /* ColoredQuantum.h */,
+				1A58AAD221A839E400BEFE13 /* common.h */,
+				1A58AAD321A839E400BEFE13 /* ShiftDetector.h */,
+				1A58AAD421A839E400BEFE13 /* GaussianWindowCalc.h */,
+				1A58AAD521A839E400BEFE13 /* VectorExplained.h */,
+				1A58AAD621A839E400BEFE13 /* SwipeCode.h */,
+				1A58AAD721A839E400BEFE13 /* Histogram.h */,
+				1A58AAD821A839E400BEFE13 /* Vector.h */,
+				1A58AAD921A839E400BEFE13 /* BoundsChecker.h */,
+				1A58AADA21A839E400BEFE13 /* SwypeCodeDetectorDelta.h */,
+				1A58AADB21A839E400BEFE13 /* ValueWithDefect.h */,
+				1A58AADC21A839E400BEFE13 /* SwypeStepDetector.h */,
+			);
+			path = swype;
+			sourceTree = "<group>";
+		};
+		1A58AADD21A839F900BEFE13 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				1A58AADE21A839F900BEFE13 /* swype */,
+			);
+			name = src;
+			path = "../../../../videoanalytics-public/src";
+			sourceTree = "<group>";
+		};
+		1A58AADE21A839F900BEFE13 /* swype */ = {
+			isa = PBXGroup;
+			children = (
+				1A58AADF21A839F900BEFE13 /* BoundsChecker.cpp */,
+				1A58AAE021A839F900BEFE13 /* common.cpp */,
+				1A58AAE121A839F900BEFE13 /* SwypeCodeDetectorDelta.cpp */,
+				1A58AAE221A839F900BEFE13 /* VectorExplained.cpp */,
+				1A58AAE321A839F900BEFE13 /* ShiftDetector.cpp */,
+				1A58AAE421A839F900BEFE13 /* CircleDetector.cpp */,
+				1A58AAE521A839F900BEFE13 /* SwypeCodeDetector.cpp */,
+				1A58AAE621A839F900BEFE13 /* Vector.cpp */,
+				1A58AAE721A839F900BEFE13 /* Histogram.cpp */,
+				1A58AAE821A839F900BEFE13 /* SwypeCodeDetectorBaseFrame.cpp */,
+				1A58AAE921A839F900BEFE13 /* SwypeStepDetector.cpp */,
+				1A58AAEA21A839F900BEFE13 /* swype_detect.cpp */,
+			);
+			path = swype;
+			sourceTree = "<group>";
+		};
+		1A762BE721A32DDE00CEDA2A = {
+			isa = PBXGroup;
+			children = (
+				1A762BF221A32DDE00CEDA2A /* SwypeDetectorWrapper */,
+				1A762BF121A32DDE00CEDA2A /* Products */,
+				C4BE9256B2F68F0B3E0019EF /* Pods */,
+				21A1977D8F7DAB29000764CD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1A762BF121A32DDE00CEDA2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A762BF021A32DDE00CEDA2A /* libSwypeDetectorWrapper.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A762BF221A32DDE00CEDA2A /* SwypeDetectorWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				1A58AAC521A839E400BEFE13 /* include */,
+				1A58AADD21A839F900BEFE13 /* src */,
+				1A762BF321A32DDE00CEDA2A /* SwypeDetectorWrapper.h */,
+				1A762BF421A32DDE00CEDA2A /* SwypeDetectorWrapper.mm */,
+			);
+			path = SwypeDetectorWrapper;
+			sourceTree = "<group>";
+		};
+		21A1977D8F7DAB29000764CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76D663F8ABBE7E3F610A48C9 /* Pods_SwypeDetectorWrapper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4BE9256B2F68F0B3E0019EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				368B33AB9072D3DCA5CB735C /* Pods-SwypeDetectorWrapper.debug.xcconfig */,
+				14A21B5C31977A784BD6CE7D /* Pods-SwypeDetectorWrapper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A762BEF21A32DDE00CEDA2A /* SwypeDetectorWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A762BF921A32DDE00CEDA2A /* Build configuration list for PBXNativeTarget "SwypeDetectorWrapper" */;
+			buildPhases = (
+				A580663BBBC93FC84873F6EC /* [CP] Check Pods Manifest.lock */,
+				1A762BEC21A32DDE00CEDA2A /* Sources */,
+				1A762BED21A32DDE00CEDA2A /* Frameworks */,
+				1A762BEE21A32DDE00CEDA2A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwypeDetectorWrapper;
+			productName = SwypeDetectorWrapper;
+			productReference = 1A762BF021A32DDE00CEDA2A /* libSwypeDetectorWrapper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A762BE821A32DDE00CEDA2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "JSC Nordavind";
+				TargetAttributes = {
+					1A762BEF21A32DDE00CEDA2A = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 1A762BEB21A32DDE00CEDA2A /* Build configuration list for PBXProject "SwypeDetectorWrapper" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A762BE721A32DDE00CEDA2A;
+			productRefGroup = 1A762BF121A32DDE00CEDA2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A762BEF21A32DDE00CEDA2A /* SwypeDetectorWrapper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A580663BBBC93FC84873F6EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SwypeDetectorWrapper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A762BEC21A32DDE00CEDA2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A58AAEE21A839F900BEFE13 /* VectorExplained.cpp in Sources */,
+				1A58AAF021A839F900BEFE13 /* CircleDetector.cpp in Sources */,
+				1A58AAF421A839F900BEFE13 /* SwypeCodeDetectorBaseFrame.cpp in Sources */,
+				1A58AAEB21A839F900BEFE13 /* BoundsChecker.cpp in Sources */,
+				1A58AAF521A839F900BEFE13 /* SwypeStepDetector.cpp in Sources */,
+				1A58AAF121A839F900BEFE13 /* SwypeCodeDetector.cpp in Sources */,
+				1A58AAEC21A839F900BEFE13 /* common.cpp in Sources */,
+				1A58AAF221A839F900BEFE13 /* Vector.cpp in Sources */,
+				1A58AAF321A839F900BEFE13 /* Histogram.cpp in Sources */,
+				1A58AAED21A839F900BEFE13 /* SwypeCodeDetectorDelta.cpp in Sources */,
+				1A58AAEF21A839F900BEFE13 /* ShiftDetector.cpp in Sources */,
+				1A58AAF621A839F900BEFE13 /* swype_detect.cpp in Sources */,
+				1A762BF521A32DDE00CEDA2A /* SwypeDetectorWrapper.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1A762BF721A32DDE00CEDA2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1A762BF821A32DDE00CEDA2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A762BFA21A32DDE00CEDA2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368B33AB9072D3DCA5CB735C /* Pods-SwypeDetectorWrapper.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CCN58UW97;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../videoanalytics-public/include";
+			};
+			name = Debug;
+		};
+		1A762BFB21A32DDE00CEDA2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14A21B5C31977A784BD6CE7D /* Pods-SwypeDetectorWrapper.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8CCN58UW97;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../../videoanalytics-public/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A762BEB21A32DDE00CEDA2A /* Build configuration list for PBXProject "SwypeDetectorWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A762BF721A32DDE00CEDA2A /* Debug */,
+				1A762BF821A32DDE00CEDA2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A762BF921A32DDE00CEDA2A /* Build configuration list for PBXNativeTarget "SwypeDetectorWrapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A762BFA21A32DDE00CEDA2A /* Debug */,
+				1A762BFB21A32DDE00CEDA2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A762BE821A32DDE00CEDA2A /* Project object */;
+}
