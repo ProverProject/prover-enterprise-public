@@ -1,0 +1,3 @@
+[submodule "client/videoanalytics-public"]
+	path = client/videoanalytics-public
+	url = https://github.com/ProverProject/videoanalytics-public
