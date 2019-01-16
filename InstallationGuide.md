@@ -16,8 +16,10 @@ Prover Enterprise was tested with NEM Node v0.6.95 and v0.6.96.
 
 ### Configure NEM Node
 
-Set greater `-Xms` and `-Xmx` in `runNis.bat` if you have enough memory. There were issues with default settings, like NEM Node failing to sync. 
+Set greater `-Xms` and `-Xmx` in `runNis.bat` if you have enough memory. There were issues with default settings, like NEM Node failing to sync.
+
 `-Xms` is starting memory and `-Xmx` is max memory used by the program.
+
 Recommended settings are `-Xms1G -Xmx3G`
 
 ### Run NEM Node
@@ -86,7 +88,7 @@ webgui:
 
 ### Register your license
 
-Open Web GUI in your browser (by default [localhost:7898]), type your desired password twice and click "Send".
+Open Web GUI in your browser (by default http://127.0.0.1:7898), type your desired password twice and click "Send".
 
 This also unlocks your license, so you can use JSON-RPC API.
 
