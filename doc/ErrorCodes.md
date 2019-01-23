@@ -84,6 +84,27 @@ Applicable to:
 - `submit-message`
 - `estimate-fee`
 
+## -302 Blockchain alert
+
+Alert transaction is detected during the indexing of the blockchain. The
+current software version can't be used anymore, upgrade is required.
+
+Applicable to:
+
+- `get-balance`
+- `fast-request-swype-code`
+- `request-swype-code`
+- `submit-media-hash`
+- `submit-message`
+- `estimate-fee`
+- `verify-prover-media` (new job only)
+- `verify-clapperboard-media` (new job only)
+
+"data" field of the error contains alert message.
+
+`get-status` request doesn't return this error, the alert message is returned
+as a part of its normal reply.
+
 ## -401 Insufficient funds
 
 There's no enough tokens or XEM to perform the request.

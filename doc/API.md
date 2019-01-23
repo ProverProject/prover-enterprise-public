@@ -44,7 +44,8 @@ None.
         {
           "state": "locked",
           "address": "NBEZUMIEHSSLSABFQ64S3YWTV5LCQ5RV5LUB7S62"
-        }
+        },
+        "alert-message": null
       }
     }
 
