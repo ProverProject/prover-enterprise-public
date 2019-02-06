@@ -258,7 +258,9 @@ may be called several times.
 - mediahashtype - should always be "SHA-256" for this version;
 - clientid - numeric user id within the customer's system;
 - referencetxhash - hash of transaction returned by `request-swype-code` RPC
-  call used to generate the swype-code for this video file.
+  call used to generate the swype-code for this video file;
+- message - optional text message, may be omitted if no message is attached
+  to the transaction.
 
 ### Parameters (submit, swype-code obtained using fast-request-swype-code)
 
@@ -267,7 +269,9 @@ may be called several times.
 - clientid;
 - referenceblockheight - reference block height returned by
   `fast-request-swype-code` RPC call used to generate the swype-code for this
-  video file.
+  video file;
+- message - optional text message, may be omitted if no message is attached
+  to the transaction.
 
 ### Parameters (polling)
 
