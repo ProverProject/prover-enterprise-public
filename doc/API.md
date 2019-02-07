@@ -273,6 +273,15 @@ may be called several times.
 - message - optional text message, may be omitted if no message is attached
   to the transaction.
 
+### Parameters (submit, without swype-code)
+
+- mediahash;
+- mediahashtype;
+- clientid;
+- noreference (just a parameter name, without a value);
+- message - optional text message, may be omitted if no message is attached
+  to the transaction.
+
 ### Parameters (polling)
 
 - txhash - transaction hash returned by the first call.
