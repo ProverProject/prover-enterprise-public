@@ -316,6 +316,12 @@ may be called several times.
     }
 
 ## /ent/v1/verify-prover-media
+## /ent/v1/verify-clapperboard-media
+## /ent/v1/verify-media
+
+All there requests do exactly the same. The actual name doesn't matter. First
+two variants are preserved for backward compatibility and may be removed in the
+future.
 
 The Software DOES NOT provide any methods for uploading video files. Neither
 does The Software remove files in the upload directory. Management of files
@@ -367,31 +373,38 @@ the particular job.
     {
       "result":
       {
-        "status": "finished",
+        "submitMediaHash":
+        {
+          "blockTimestamp": 1547131121,
+          "blockHash": "ff22f53bcfd87787e8ec4a45ec525e15603cacf37edf3c5e7bb24564de16b2ad",
+          "transactionHash": "40e547e7af61f36711f80341cc26f159a1ffe203d869a3e4d9243ab202cbc656",
+          "clientId": 100,
+          "sender": "NBGICTQQZXWOY64WL5OQ7LKVXK6REMYURYEXTNUD",
+          "amount": 1000000,
+          "blockHeight": 1974927,
+          "message": "",
+          "recipient": "NCD47EZ7723UCYQCNHHE3YSKWMWVMM7NLO7ITEST"
+        },
+        "swype": "*82156616",
+        "swypeCodeEndOffset": 94.746,
         "proven": true,
-        "clientId": 666,
-        "swypeAlgo": "fast",
-        "referenceBlockHeight": 1881912,
-        "submitBlockHeight": 1881955,
-        "lowTimestampBoundary": 1541540000,
-        "highTimestampBoundary": 1541550000,
-        "swypeCodeBeginOffset": 2.2345,
-        "swypeCodeEndOffset": 9.7888,
         "va":
         {
-          "cutdetect": null
-        }
+          "cutdetect": []
+        },
+        "reference":
+        {
+          "sender": "NBGICTQQZXWOY64WL5OQ7LKVXK6REMYURYEXTNUD",
+          "recipient": "NB5WGV4EZ6ZTO3DO2O5RH2TWIV6CYILTCK3NTEST",
+          "amount": 5000000,
+          "blockHeight": 1974925,
+          "blockSignature": "ac5d36c749d1bd4d9e46491ee2a3f50d1252aacce5aff00bb8136ffc6d4d3c208181d192a965fde68fd2889f405f5a143f9b7b5c46ecbcbd5be76675d2eab30a",
+          "blockTimestamp": 1547130887,
+          "transactionHash": "54f409bd70f70c6cfd6928f22bae5adf0d995d294ba1066af1e424eee9c1ace4",
+          "blockHash": "b9f12f9ed883c4d918a9e93a8fd0af1957a9dddda4661435e4517b16f6912869"
+        },
+        "swypeCodeBeginOffset": 82.483,
+        "status": "success",
+        "mediaHash": "bdebbdb716084c15c1eba83ddbb7f8ef4051be74fb0292f0221484cbc1a8f243"
       }
     }
-
-## /ent/v1/verify-clapperboard-media
-
-Very similar to `verify-prover-media` with several exceptions:
-
-- static images (JPEG and PNG) are allowed; images are not checked by VA
-  modules;
-- there's no possibility to determine both timestamp boundaries; the video may
-  be get captured years after QR-code generation.
-- `swypeAlgo`, `swypeCodeBeginOffset` and `swypeCodeEndOffset` are not present
-  in the response; some other fields are there instead: `message` is among
-  them.

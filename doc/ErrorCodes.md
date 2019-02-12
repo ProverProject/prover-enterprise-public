@@ -97,6 +97,7 @@ Applicable to:
 - `submit-media-hash`
 - `submit-message`
 - `estimate-fee`
+- `verify-media` (new job only)
 - `verify-prover-media` (new job only)
 - `verify-clapperboard-media` (new job only)
 
@@ -133,11 +134,12 @@ Applicable to:
 
 ## -501 Invalid job token
 
-Token provided to `verify-prover-media` or `verify-clapperboard-media` was
-not returned by the previous call to these RPC requests. It may happen also
+Token provided to `verify-media` (`verify-prover-media`, `verify-clapperboard-media`)
+was not returned by the previous call to these RPC requests. It may happen also
 if the database was re-initialized.
 
 Applicable to:
 
+- `verify-media`
 - `verify-prover-media`
 - `verify-clapperboard-media`
