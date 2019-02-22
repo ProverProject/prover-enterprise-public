@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_swype_v2_target">
+
+    <target
+        android:name="dash0"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash1"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash2"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash3"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash4"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash5"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash6"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash7"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash8"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dash9"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dashA"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dashB"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dashC"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dashD"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dashE"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+    <target
+        android:name="dashF"
+        android:animation="@animator/swype_v2_dash_fill_disappear" />
+
+</animated-vector>

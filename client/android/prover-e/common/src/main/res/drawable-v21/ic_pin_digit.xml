@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/checked_enabled"
+        android:drawable="@drawable/ic_pin_digit_checked"
+        android:state_checked="true"
+        android:state_enabled="true" />
+
+    <item
+        android:id="@+id/selected_enabled"
+        android:drawable="@drawable/ic_pin_digit_selected"
+        android:state_checked="false"
+        android:state_enabled="true"
+        android:state_selected="true" />
+
+    <item
+        android:id="@+id/enabled"
+        android:drawable="@drawable/ic_pin_digit_unchecked"
+        android:state_checked="false"
+        android:state_enabled="true"
+        android:state_selected="false" />
+
+    <!--    <item
+            android:id="@+id/checked"
+            android:drawable="@drawable/ic_index_mark_filled_disabled"
+            android:state_checked="true"
+            android:state_enabled="false" />
+
+        <item
+            android:id="@+id/selected"
+            android:drawable="@drawable/ic_index_mark_selected_disabled"
+            android:state_checked="false"
+            android:state_enabled="false"
+            android:state_selected="true" />
+
+        <item
+            android:id="@+id/disabled"
+            android:drawable="@drawable/ic_index_mark_disabled"
+            android:state_checked="false"
+            android:state_enabled="false"
+            android:state_selected="false" />
+
+        <transition
+            android:drawable="@drawable/ic_index_mark_current_anim"
+            android:fromId="@+id/enabled"
+            android:reversible="true"
+            android:toId="@id/selected_enabled" />
+
+        <transition
+            android:drawable="@drawable/ic_index_mark_done"
+            android:fromId="@+id/selected_enabled"
+            android:reversible="true"
+            android:toId="@+id/checked_enabled" />
+
+        <transition
+            android:fromId="@+id/enabled"
+            android:toId="@+id/disabled"
+            android:drawable="@drawable/ic_index_mark_failed"
+            />
+
+        <transition
+            android:fromId="@+id/selected_enabled"
+            android:toId="@+id/selected"
+            android:drawable="@drawable/ic_index_mark_current_failed"
+            />
+
+        <transition
+            android:fromId="@+id/checked_enabled"
+            android:toId="@+id/checked"
+            android:drawable="@drawable/ic_index_mark_current_failed"
+            /> -->
+
+</animated-selector>

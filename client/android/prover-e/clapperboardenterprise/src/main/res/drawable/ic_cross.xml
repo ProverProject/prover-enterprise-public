@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="30dp"
+    android:height="30dp"
+    android:viewportWidth="30"
+    android:viewportHeight="30">
+
+    <path
+        android:name="crossLine1"
+        android:pathData="M4.5,25.5 l21,-21"
+        android:strokeWidth="2"
+        android:strokeColor="#3B3D47"
+        android:trimPathEnd="1" />
+
+    <path
+        android:name="border"
+        android:pathData="m30,29 h-29v-28h28v28 l-24.5,-24.5"
+        android:strokeWidth="2"
+        android:strokeColor="#3B3D47"
+        android:trimPathStart=".7988"
+        android:trimPathEnd="1" />
+</vector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/ic_index_mark">
+
+    <target android:name="circle">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="400"
+                    android:propertyName="fillColor"
+                    android:valueFrom="#ff7ED321"
+                    android:valueTo="#ffff0000"
+                    android:valueType="colorType" />
+
+                <objectAnimator
+                    android:duration="0"
+                    android:propertyName="pathData"
+                    android:startOffset="0"
+                    android:valueFrom="@string/circle6in6"
+                    android:valueTo="@string/circle6in6"
+                    android:valueType="pathType" />
+
+                <objectAnimator
+                    android:duration="500"
+                    android:propertyName="fillAlpha"
+                    android:startOffset="600"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

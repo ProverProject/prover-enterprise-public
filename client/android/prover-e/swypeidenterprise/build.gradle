@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion sdkVersion
+    defaultConfig {
+        applicationId "io.prover.swypeid.enterprise"
+        minSdkVersion 21
+        targetSdkVersion sdkVersion
+        versionCode 6
+        versionName "1.3.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    applicationVariants.matching(
+            { it.buildType.name == android.buildTypes.release.name }
+    ).all { variant ->
+
+        variant.outputs.all {
+            outputFileName = "../../../../../../build/${variant.applicationId}-${variant.flavorName}-${variant.versionName}_${variant.versionCode}.apk"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+
+    if (project.hasProperty("ProverMvp.signing")) {
+        def gradleFile = new File(signDir, "ProverMvp.enterprise.gradle")
+        if (gradleFile.exists()){
+            apply from: gradleFile.absolutePath
+        }
+    }
+
+    flavorDimensions "main"
+    productFlavors {
+        arm {
+            versionCode = android.defaultConfig.versionCode
+            dimension "main"
+            ndk {
+                abiFilters "armeabi-v7a",  "arm64-v8a"
+            }
+            externalNativeBuild {
+                cmake {
+                    abiFilters "armeabi-v7a",  "arm64-v8a"
+                }
+            }
+        }
+
+        total {
+            versionCode = android.defaultConfig.versionCode
+            dimension "main"
+            ndk {
+                abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            }
+            externalNativeBuild {
+                cmake {
+                    abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    testImplementation "org.robolectric:robolectric:3.8"
+
+    implementation project(path: ':swypeidlib')
+}

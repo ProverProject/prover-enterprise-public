@@ -1,0 +1,5 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="design_fab_image_size" tools:override="true">30dp</dimen>
+    <integer name="qr_to_cross_animation_time">800</integer>
+</resources>

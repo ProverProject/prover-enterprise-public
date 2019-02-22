@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="30"
+    android:viewportHeight="30">
+
+    <group
+        android:name="prover"
+        android:translateX="16"
+        android:translateY="16">
+
+        <path
+            android:fillColor="#30e31e24"
+            android:pathData="@string/proverLargeDot" />
+
+        <path
+            android:fillColor="#30000000"
+            android:pathData="@string/proverLarge2" />
+
+    </group>
+
+</vector>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="clapperboard_help_images">
+        <item>@drawable/ic_help_prover_1</item>
+        <item>@drawable/ic_help_prover_2</item>
+        <item>@drawable/ic_help_clapperboard_3</item>
+        <item>@drawable/ic_help_clapperboard_4</item>
+        <item>@drawable/ic_help_clapperboard_5</item>
+        <item>@drawable/ic_help_clapperboard_6</item>
+        <item>@drawable/ic_help_prover_8</item>
+        <item>@drawable/ic_help_prover_9</item>
+    </array>
+
+    <array name="clapperboard_help_strings">
+        <item>@string/help_prover_1</item>
+        <item>@string/help_prover_2</item>
+        <item>@string/help_clapperboard_3</item>
+        <item>@string/help_clapperboard_4</item>
+        <item>@string/help_clapperboard_5</item>
+        <item>@string/help_prover_7</item>
+        <item>@string/help_prover_8</item>
+        <item>@string/help_prover_9</item>
+    </array>
+
+    <array name="swypeid_help_images">
+        <item>@drawable/ic_help_prover_1</item>
+        <item>@drawable/ic_help_prover_2</item>
+        <item>@drawable/ic_help_swypeid_4</item>
+        <item>@drawable/ic_help_swypeid_5</item>
+        <item>@drawable/ic_help_swypeid_6</item>
+        <item>@drawable/ic_help_swypeid_7</item>
+        <item>@drawable/ic_help_prover_8</item>
+        <item>@drawable/ic_help_prover_9</item>
+    </array>
+
+    <array name="swypeid_help_strings">
+        <item>@string/help_prover_1</item>
+        <item>@string/help_prover_2</item>
+        <item>@string/help_swypeid_4</item>
+        <item>@string/help_swypeid_5</item>
+        <item>@string/help_swypeid_6</item>
+        <item>@string/help_prover_7</item>
+        <item>@string/help_prover_8</item>
+        <item>@string/help_prover_9</item>
+    </array>
+
+    <array name="clapperboard_help_images_enterprise">
+        <item>@drawable/ic_help_enterprise_login_1</item>
+        <item>@drawable/ic_help_clapperboard_3</item>
+        <item>@drawable/ic_help_clapperboard_4</item>
+        <item>@drawable/ic_help_clapperboard_5</item>
+        <item>@drawable/ic_help_clapperboard_6</item>
+        <item>@drawable/ic_help_prover_8</item>
+    </array>
+
+    <array name="clapperboard_help_strings_enterprise">
+        <item>@string/help_enterprise_1</item>
+        <item>@string/help_clapperboard_3</item>
+        <item>@string/help_clapperboard_4</item>
+        <item>@string/help_clapperboard_5</item>
+        <item>@string/help_prover_7</item>
+        <item>@string/help_prover_8</item>
+    </array>
+
+    <array name="swypeid_help_images_enterprise">
+        <item>@drawable/ic_help_enterprise_login_1</item>
+        <item>@drawable/ic_help_swypeid_4</item>
+        <item>@drawable/ic_help_swypeid_5</item>
+        <item>@drawable/ic_help_swypeid_6</item>
+        <item>@drawable/ic_help_swypeid_7</item>
+        <item>@drawable/ic_help_prover_8</item>
+    </array>
+
+    <array name="swypeid_help_strings_enterprise">
+        <item>@string/help_enterprise_1</item>
+        <item>@string/help_swypeid_4</item>
+        <item>@string/help_swypeid_5</item>
+        <item>@string/help_swypeid_6</item>
+        <item>@string/help_prover_7</item>
+        <item>@string/help_prover_8</item>
+    </array>
+</resources>

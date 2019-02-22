@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/balanceContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="56dp"
+    android:layout_marginTop="16dp"
+    android:background="@drawable/balance_background"
+    android:gravity="center_vertical"
+    android:minWidth="160dp"
+    android:orientation="horizontal"
+    android:padding="3dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/proverWalletStatusIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_prover_ok" />
+
+    <TextView
+        android:id="@+id/balanceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:gravity="top"
+        android:textColor="#DEffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/proverWalletStatusIcon"
+        app:layout_constraintRight_toLeftOf="@+id/openWalletIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="0.0000000000 PF" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/openWalletIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="42dp"
+        android:minHeight="42dp"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_wallet_24" />
+</android.support.constraint.ConstraintLayout>

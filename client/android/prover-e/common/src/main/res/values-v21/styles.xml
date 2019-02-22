@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Prover.NoActionBar.Button.Dark" parent="@android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/btn_default</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+</resources>

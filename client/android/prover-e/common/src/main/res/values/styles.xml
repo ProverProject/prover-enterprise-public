@@ -1,0 +1,36 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light" />
+
+    <style name="Prover.NoActionBar.Light" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorSecondary">#9B9B9B</item>
+        <item name="android:textColorPrimary">@color/almostBlack</item>
+        <item name="colorPrimary">#9B9B9B</item>
+        <item name="colorPrimaryDark">@color/almostBlack</item>
+        <item name="colorAccent">#7ED321</item>
+        <item name="colorControlNormal">#9B9B9B</item>
+        <item name="colorControlActivated">#9B9B9B</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Prover.NoActionBar.Wallet" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColorSecondary">#9B9B9B</item>
+        <item name="android:textColorPrimary">@color/almostBlack</item>
+        <item name="colorPrimary">#9B9B9B</item>
+        <item name="colorPrimaryDark">@color/almostBlack</item>
+        <item name="colorAccent">#7ED321</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Prover.NoActionBar.Button.Dark" parent="Base.Widget.AppCompat.Button">
+        <item name="android:textColor">#ff0000</item>
+    </style>
+</resources>

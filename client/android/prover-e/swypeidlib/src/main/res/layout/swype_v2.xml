@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swypeView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+        android:id="@+id/indexMarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/swypePointCurrent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_swype_v2_center" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/swypePointTarget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.75"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/swypePointCurrent"
+        app:layout_constraintLeft_toLeftOf="@+id/swypePointCurrent"
+        app:layout_constraintRight_toRightOf="@+id/swypePointCurrent"
+        app:layout_constraintTop_toTopOf="@+id/swypePointCurrent"
+        app:srcCompat="@drawable/ic_swype_v2_target" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/swypePointTarget2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="@+id/swypePointCurrent"
+        app:layout_constraintLeft_toLeftOf="@+id/swypePointCurrent"
+        app:layout_constraintRight_toRightOf="@+id/swypePointCurrent"
+        app:layout_constraintTop_toTopOf="@+id/swypePointCurrent"
+        app:srcCompat="@drawable/ic_swype_v2_target" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/swypeArrow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/swypePointCurrent"
+        app:layout_constraintLeft_toLeftOf="@+id/swypePointCurrent"
+        app:layout_constraintRight_toRightOf="@+id/swypePointCurrent"
+        app:layout_constraintTop_toTopOf="@+id/swypePointCurrent"
+        app:srcCompat="@drawable/ic_swype_v2_arr_v1" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/swypeArrow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.75"
+        app:layout_constraintBottom_toBottomOf="@+id/swypePointCurrent"
+        app:layout_constraintLeft_toLeftOf="@+id/swypePointCurrent"
+        app:layout_constraintRight_toRightOf="@+id/swypePointCurrent"
+        app:layout_constraintTop_toTopOf="@+id/swypePointCurrent"
+        app:srcCompat="@drawable/ic_swype_v2_arr_v1" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/swypeArrow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        app:layout_constraintBottom_toBottomOf="@+id/swypePointCurrent"
+        app:layout_constraintLeft_toLeftOf="@+id/swypePointCurrent"
+        app:layout_constraintRight_toRightOf="@+id/swypePointCurrent"
+        app:layout_constraintTop_toTopOf="@+id/swypePointCurrent"
+        app:srcCompat="@drawable/ic_swype_v2_arr_v1" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/swypeArrow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.25"
+        app:layout_constraintBottom_toBottomOf="@+id/swypePointCurrent"
+        app:layout_constraintLeft_toLeftOf="@+id/swypePointCurrent"
+        app:layout_constraintRight_toRightOf="@+id/swypePointCurrent"
+        app:layout_constraintTop_toTopOf="@+id/swypePointCurrent"
+        app:srcCompat="@drawable/ic_swype_v2_arr_v1" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:drawable="@drawable/ic_qr_cross">
+
+    <target android:name="qrcode">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="@integer/qr_to_cross_animation_time"
+                android:propertyName="trimPathStart"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+
+    <target android:name="border">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="@integer/qr_to_cross_animation_time"
+                    android:propertyName="trimPathStart"
+                    android:valueFrom="0.7988"
+                    android:valueTo="0"
+                    android:valueType="floatType" />
+                <objectAnimator
+                    android:duration="@integer/qr_to_cross_animation_time"
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="1"
+                    android:valueTo="0.77"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target android:name="crossLine1">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="@integer/qr_to_cross_animation_time"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="1"
+                android:valueTo="0"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+</animated-vector>

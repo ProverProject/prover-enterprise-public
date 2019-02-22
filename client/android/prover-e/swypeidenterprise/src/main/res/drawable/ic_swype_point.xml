@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="20"
+    android:viewportHeight="20">
+
+    <group
+        android:translateX="10"
+        android:translateY="10">
+        <path
+            android:name="centerPoint"
+            android:fillColor="#e31e24"
+            android:pathData="@string/swype_point_center_norm"
+            android:strokeWidth="0.2"
+            android:strokeColor="#e31e24" />
+
+    </group>
+
+</vector>

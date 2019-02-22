@@ -1,0 +1,75 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion sdkVersion
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion sdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-std=c++11 -frtti -fexceptions"
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            externalNativeBuild {
+                cmake {
+                    cppFlags "-fexceptions -frtti -fPIE -fPIC -std=c++11"
+                    abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+                }
+            }
+        }
+        debug {
+            externalNativeBuild {
+                cmake {
+                    cppFlags "-fexceptions -frtti -fPIE -funwind-tables -DDEBUG -fPIC  -std=c++11"
+                    abiFilters "arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+                }
+            }
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api project(path: ':common')
+
+    // https://github.com/sannies/mp4parser
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.21'
+    api 'com.jakewharton.threetenabp:threetenabp:1.0.4'
+    api 'com.caverock:androidsvg-aar:1.3'
+
+}

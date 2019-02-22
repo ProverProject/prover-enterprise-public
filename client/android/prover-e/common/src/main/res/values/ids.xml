@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="qrCodeImage" type="id" />
+    <item name="generatedBy" type="id" />
+    <item name="proverLogo" type="id" />
+    <item name="originalText" type="id" />
+</resources>

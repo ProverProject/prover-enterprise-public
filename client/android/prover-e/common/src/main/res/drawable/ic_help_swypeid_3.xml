@@ -1,0 +1,209 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="315dp"
+    android:viewportWidth="160"
+    android:viewportHeight="315">
+
+    <group android:translateY="70">
+        <path
+            android:fillColor="#D8D9DB"
+            android:fillType="evenOdd"
+            android:pathData="M160,28H0v27h63c-0.65,-1 -1,-2.2 -1,-3.5 0,-3.6 2.9,-6.5 6.5,-6.5s6.5,2.9 6.5,6.5c0,1.3 -0.38,2.5 -1,3.5h86V28z" />
+
+        <group
+            android:translateX="30.6"
+            android:translateY="15.1">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit1" />
+        </group>
+
+        <group
+            android:translateX="37.8"
+            android:translateY="7.9">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit0" />
+        </group>
+
+        <group
+            android:translateX="49"
+            android:translateY="17.1">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit2" />
+        </group>
+
+        <group
+            android:translateX="67"
+            android:translateY="13.6">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit4" />
+        </group>
+
+        <group
+            android:translateX="80.8"
+            android:translateY="8.1">
+            <path
+                android:fillColor="#D8D9DB"
+                android:pathData="@string/letterX" />
+        </group>
+
+        <group
+            android:translateX="108.8"
+            android:translateY="6.6">
+            <path
+                android:fillColor="#D8D9DB"
+                android:pathData="@string/digit7" />
+        </group>
+
+        <group
+            android:translateX="121.8"
+            android:translateY="14.8">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit6" />
+        </group>
+
+        <group
+            android:translateX="124.4"
+            android:translateY="12.9">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit8" />
+        </group>
+
+        <group
+            android:translateX="27.18"
+            android:translateY="42.57">
+            <path
+                android:fillColor="#fff"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit8" />
+        </group>
+
+        <group
+            android:translateX="37.81"
+            android:translateY="37.59">
+            <path
+                android:fillColor="#fff"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit0" />
+        </group>
+
+
+        <group
+            android:translateX="48.65"
+            android:translateY="37.59">
+            <path
+                android:fillColor="#fff"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit0" />
+        </group>
+
+        <group
+            android:translateX="80.6"
+            android:translateY="37.79">
+            <path
+                android:fillColor="#fff"
+                android:pathData="@string/letterX" />
+        </group>
+
+        <group
+            android:translateX="111.24"
+            android:translateY="44.55">
+            <path
+                android:fillColor="#fff"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit6" />
+        </group>
+
+        <group
+            android:translateX="113.55"
+            android:translateY="37.59">
+            <path
+                android:fillColor="#fff"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit0" />
+        </group>
+
+        <group
+            android:translateX="124.31"
+            android:translateY="37.59">
+            <path
+                android:fillColor="#fff"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit0" />
+        </group>
+
+        <group
+            android:translateX="27"
+            android:translateY="72.4">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit8" />
+        </group>
+
+        <group
+            android:translateX="45.6"
+            android:translateY="74.44">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit6" />
+        </group>
+
+        <group
+            android:name="digit4"
+            android:translateX="55.1"
+            android:translateY="73.2">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit4" />
+        </group>
+
+        <path
+            android:fillColor="#D8D9DB"
+            android:fillType="evenOdd"
+            android:pathData="M109.59,73.14h2.2v-1.9h-2.2v-7.3h-1.9l-5.7,7.6v1.6h5.5v1.7a7.1,7.1 0,0 1,2.13 0.21v-1.9zM107.39,67.24l-3.1,4h3.1v-4z" />
+
+        <group
+            android:translateX="113.3"
+            android:translateY="72.4">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit8" />
+        </group>
+
+        <group
+            android:translateX="123.9"
+            android:translateY="67.4">
+            <path
+                android:fillColor="#D8D9DB"
+                android:fillType="evenOdd"
+                android:pathData="@string/digit0" />
+        </group>
+
+        <path
+            android:pathData="M144,7l6,6 6,-6"
+            android:strokeWidth="4"
+            android:strokeColor="#D8D9DB" />
+        <path
+            android:pathData="M110,121v-3.9c2.8,-4.2 4.3,-9.4 4.3,-15v-22c0,-3.5 -2.9,-6.4 -6.5,-6.4s-6.5,2.9 -6.5,6.4v-4.3c0,-3.5 -2.9,-6.4 -6.5,-6.4s-6.5,2.9 -6.5,6.4v2.1,-6.4c0,-3.5 -2.9,-6.4 -6.5,-6.4s-6.5,2.9 -6.5,6.4v6.4,-28c0,-3.5 -2.9,-6.4 -6.5,-6.4s-6.5,2.9 -6.5,6.4v45,-17l-4.6,4.5c-4.1,4 -8.4,11 -8.4,17 -0.04,5.4 4.2,13 8.4,17 1.3,1.2 2.4,2.7 3.2,4.3"
+            android:strokeWidth="4"
+            android:strokeColor="#D8D9DB"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+
+    </group>
+</vector>

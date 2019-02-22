@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+
+    <group
+        android:name="root"
+        android:translateX="30"
+        android:translateY="30">
+
+        <path
+            android:name="circle"
+            android:pathData="M-28.5,0 a28.5,28.5 0,1,1 57,0 a28.5,28.5 0,1,1 -57,0"
+            android:strokeWidth="3"
+            android:strokeColor="#ffffff" />
+
+        <group android:rotation="0">
+            <path
+                android:name="dash0"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="22.5">
+            <path
+                android:name="dash1"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="45">
+            <path
+                android:name="dash2"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group
+
+            android:rotation="67.5">
+            <path
+                android:name="dash3"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group
+
+            android:rotation="90">
+            <path
+                android:name="dash4"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group
+
+            android:rotation="112.5">
+            <path
+                android:name="dash5"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group
+
+            android:rotation="135">
+            <path
+                android:name="dash6"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="157.5">
+            <path
+                android:name="dash7"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="180">
+            <path
+                android:name="dash8"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="202.5">
+            <path
+                android:name="dash9"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="225">
+            <path
+                android:name="dashA"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="247.5">
+            <path
+                android:name="dashB"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="270">
+            <path
+                android:name="dashC"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="292.5">
+            <path
+                android:name="dashD"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="315">
+            <path
+                android:name="dashE"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+        <group android:rotation="337.5">
+            <path
+                android:name="dashF"
+                android:pathData="@string/swypeCenterDash22_5"
+                android:strokeWidth="3"
+                android:strokeColor="#ffffff"
+                android:trimPathStart="0"
+                android:trimPathEnd="1" />
+        </group>
+
+    </group>
+
+</vector>

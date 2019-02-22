@@ -1,0 +1,91 @@
+<resources>
+    <string name="permissionRequired">Permissions required</string>
+    <string name="writePermissionRequired">File write permissions are required to write file</string>
+    <string name="readPermissionRequired">File read permissions are required to read file</string>
+
+    <string name="cantFindApp">Can\'t find app to open file</string>
+
+    <string name="offline">Offline</string>
+    <string name="info">Info</string>
+    <string name="addressCopied">Address copied to clipboard</string>
+    <string name="address_">Wallet address:</string>
+    <string name="walletAddress">Wallet address</string>
+    <string name="accountInfoMessage">IMPORTANT: DO NOT SEND TOKENS TO THIS ADDRESS!\n\nSend only Ropsten Testnet ether to this deposit address. Sending tokens or any other currency, including Mainnet ether, to this address will result in the permanent loss of your deposit.</string>
+
+    <string name="import_">Import</string>
+    <string name="export">Export</string>
+    <string name="password">Password</string>
+    <string name="exportWallet">Export wallet</string>
+    <string name="importWallet">Import wallet</string>
+    <string name="fileNotExist">File does not exist</string>
+    <string name="keystore_json_file">Keystore / JSON File</string>
+    <string name="open">Open</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="enter_pin_code">Enter your PIN code</string>
+    <string name="create_pin_code">Create your PIN code</string>
+    <string name="forgot_pin">Forgot pin?</string>
+    <string name="authorize">Enter your password</string>
+    <string name="create_account">Account registration</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot password?</string>
+
+    <string name="inputLogin">Input login</string>
+    <string name="badLogin">Login should be a valid Email</string>
+    <string name="passwordError">Input password</string>
+    <string name="login">Login (e-mail)</string>
+    <string name="skip">Skip</string>
+
+    <string name="wallet">Wallet</string>
+    <string name="settings">Settings</string>
+    <string name="balance">Balance</string>
+
+    <!--
+    <string name="buyProofText"> Prover is an independent assistant that helps authenticate and verify video content.\n\n
+This online-service was created using blockchain technology. The platform was created to eliminate forgery of video materials, and confirm their authenticity.\n\n
+Proof coins are used to pay for blockchain transactions when creating verified video.\n\n
+You can buy some Proof coins here.</string> -->
+
+    <string name="buyProofText">Proof coins are used to pay for blockchain transactions when creating verified video.\n\nYou can buy some Proof coins here.</string>
+
+    <string name="buyProof">Buy %.2f PF</string>
+    <string name="requesting_price">Requesting price</string>
+    <string name="offers_outdated">Offer outdated\nClick to update</string>
+    <string name="cantGetPrice">Can\'t get price.</string>
+    <string name="notEnoughMoney">Not enough funds on your account.</string>
+    <string name="price">Price: %s PF</string>
+    <string name="xem">%s XEM</string>
+
+    <string name="help_enterprise_1">Connect to private backend.</string>
+    <string name="help_prover_1">Sign up or sign in to your account.</string>
+    <string name="help_prover_2">Recharge your balance if needed.</string>
+    <string name="help_prover_7">Continue filming.</string>
+    <string name="help_prover_8">Finish filming and keep the file.</string>
+    <string name="help_prover_9">For authentication, upload the file to the _product.prover.io_ validation service.</string>
+
+    <string name="help_swypeid_3">Set up the required video quality.</string>
+    <string name="help_swypeid_4">Start filming.</string>
+    <string name="help_swypeid_5">To activate the SWYPE ID function, make a circular movement.</string>
+    <string name="help_swypeid_6">Enter SWYPE code, moving the phone along the arrows to combine the circles.</string>
+
+    <string name="help_clapperboard_3">Enter your own explanatory comment (it will be saved in blockchain).</string>
+    <string name="help_clapperboard_4">Start the QR code generation process (takes up to 1 minute).</string>
+    <string name="help_clapperboard_5">Show the QR code in close-up to any digital camera during filming/photographing.</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="finish">Finish</string>
+    <string name="learn_how_to_use_application">Learn how to use the application</string>
+    <string name="pf_marketplace">PF marketplace</string>
+
+    <string name="reset_pin_code">Reset PIN code</string>
+    <string name="how_to_use">How to use</string>
+    <string name="enter_server_address">Enter server address</string>
+    <string name="private_backend_address">Private backend address</string>
+    <string name="connect">Connect</string>
+
+    <string name="license">License</string>
+    <string name="license_number">License number</string>
+    <string name="license_number_copied">Licence number copied to clipboard</string>
+
+</resources>

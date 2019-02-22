@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.prover.clapperboard.enterprise">
+
+    <application
+        android:name="io.prover.common.ProverApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:allowTaskReparenting="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Prover.NoActionBar.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Prover.NoActionBar.Light" />
+
+        <activity
+            android:name="io.prover.common.enterprise.auth.AuthActivity"
+            android:allowTaskReparenting="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/Prover.NoActionBar.Light" />
+
+        <activity
+            android:name="io.prover.common.prefs.WalletAndPreferencesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Prover.NoActionBar.Wallet" />
+
+    </application>
+
+</manifest>

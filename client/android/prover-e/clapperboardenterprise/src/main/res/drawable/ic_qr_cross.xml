@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="30dp"
+    android:height="30dp"
+    android:viewportWidth="30"
+    android:viewportHeight="30">
+
+    <!--    <path
+            android:fillColor="#fff"
+            android:pathData="M0,0 H30V30H-30z" /> -->
+
+    <group>
+        <clip-path android:pathData="M26,18 v2h-2.05v4h2.05v2h-2v-2.05h-2v-3.95h-2v2h-2v-4h4v2h2v-2z
+            M26,14v2h-10v8h4v2h-6v-4h2v-2h-2v-6h4v2h2v-2z
+            M14,4h12v8h-8v-2h-2v2h-2z
+            M4,4h8v8h-4v6h2v-4h2v12h-8v-8h4v-2h-4z" />
+
+        <path
+            android:name="qrcode"
+            android:pathData="M23,20 v3h-4v-4h6v6h-10v-10h10 v-10h-6v6h5 l-9,1 v-7h-10v6h6v-5 v9h-6v9-5h6v6h-7"
+            android:strokeWidth="2"
+            android:strokeColor="#3B3D47"
+            android:trimPathStart="0"
+            android:trimPathEnd="1" />
+    </group>
+
+    <path
+        android:name="crossLine1"
+        android:pathData="M4.5,25.5 l21,-21"
+        android:strokeWidth="2"
+        android:strokeColor="#3B3D47"
+        android:trimPathEnd="0" />
+
+    <path
+        android:name="border"
+        android:pathData="m30,29 h-29v-28h28v28 l-24.5,-24.5"
+        android:strokeWidth="2"
+        android:strokeColor="#3B3D47"
+        android:trimPathStart="0"
+        android:trimPathEnd="0.77" />
+</vector>

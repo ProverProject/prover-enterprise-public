@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".v1.auth.SplashFragment">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/logoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_prover_full" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/logoSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoTitle"
+        app:srcCompat="@drawable/ic_swype_id" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/enter_pin_code"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/digitMarksLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoSubtitle"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <LinearLayout
+        android:id="@+id/digitMarksLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <io.prover.common.view.CheckableImageButton
+            android:id="@+id/pinDigit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/transparent"
+            app:srcCompat="@drawable/ic_pin_digit" />
+
+        <io.prover.common.view.CheckableImageButton
+            android:id="@+id/pinDigit2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/transparent"
+            app:srcCompat="@drawable/ic_pin_digit" />
+
+        <io.prover.common.view.CheckableImageButton
+            android:id="@+id/pinDigit3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/transparent"
+            app:srcCompat="@drawable/ic_pin_digit" />
+
+        <io.prover.common.view.CheckableImageButton
+            android:id="@+id/pinDigit4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:background="@color/transparent"
+            app:srcCompat="@drawable/ic_pin_digit" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="96dp"
+        android:background="@drawable/ripple_button"
+        android:text="1"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ripple_button"
+        android:text="2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/digitMarksLayout" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:background="@drawable/ripple_button"
+        android:text="3"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="96dp"
+        android:background="@drawable/ripple_button"
+        android:text="4"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_button"
+        android:text="5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:background="@drawable/ripple_button"
+        android:text="6"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="96dp"
+        android:background="@drawable/ripple_button"
+        android:text="7"
+        android:textSize="20sp"
+        app:layout_constraintRight_toRightOf="@+id/button8"
+        app:layout_constraintTop_toTopOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_button"
+        android:text="8"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="96dp"
+        android:background="@drawable/ripple_button"
+        android:text="9"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/button8"
+        app:layout_constraintTop_toTopOf="@+id/button8" />
+
+    <ImageButton
+        android:id="@+id/buttonExit"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:layout_marginRight="96dp"
+        android:background="@drawable/ripple_button"
+        app:layout_constraintBottom_toBottomOf="@+id/button0"
+        app:layout_constraintRight_toRightOf="@+id/button0"
+        app:layout_constraintTop_toTopOf="@+id/button0"
+        app:srcCompat="@drawable/ic_use_login" />
+
+    <Button
+        android:id="@+id/button0"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ripple_button"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/forgotPin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+
+    <ImageButton
+        android:id="@+id/buttonDelete"
+        android:layout_width="64dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="96dp"
+        android:background="@drawable/ripple_button"
+        app:layout_constraintBottom_toBottomOf="@+id/button0"
+        app:layout_constraintLeft_toLeftOf="@+id/button0"
+        app:layout_constraintTop_toTopOf="@+id/button0"
+        app:srcCompat="@drawable/ic_backspase" />
+
+    <Button
+        android:id="@+id/forgotPin"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/btn_transp_primary"
+        android:elevation="0dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="@string/forgot_pin"
+        android:textColor="@color/lightGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/progressContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#80000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+</android.support.constraint.ConstraintLayout>
