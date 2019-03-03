@@ -3,8 +3,6 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion sdkVersion
 
-
-
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion sdkVersion
@@ -39,9 +37,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-    implementation 'com.android.billingclient:billing:1.1'
     implementation 'com.romandanylyk:pageindicatorview:1.0.1@aar'
-    //api 'com.madgag.spongycastle:pkix:1.54.0.0'
 
     api 'com.android.support:support-v4:' + appCompatVersion
     api 'com.android.support:recyclerview-v7:' + appCompatVersion
