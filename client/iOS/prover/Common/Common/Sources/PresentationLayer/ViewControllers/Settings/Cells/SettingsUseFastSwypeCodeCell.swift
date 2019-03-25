@@ -1,21 +1,12 @@
 import UIKit
 
-class SettingsUseFastSwypeCodeCell: SettingsTableViewBaseCell {
+class SettingsUseFastSwypeCodeCell: SettingsSwitchCell {
 
-    private lazy var switchControl: UISwitch = {
-        let sw = UISwitch()
-        sw.isOn = Settings.useFastSwypeCode
-        sw.addTarget(self, action: #selector(switchAction), for: .valueChanged)
-        return sw
-    }()
-    
-    override func setupLayout() {
-        super.setupLayout()
-        
-        stackView.addArrangedSubview(switchControl)
+    override var switchInitValue: Bool {
+        return Settings.useFastSwypeCode
     }
-    
-    @objc private func switchAction(_ sender: UISwitch) {
+
+    override func switchAction(_ sender: UISwitch) {
         Settings.useFastSwypeCode = sender.isOn
     }
 }

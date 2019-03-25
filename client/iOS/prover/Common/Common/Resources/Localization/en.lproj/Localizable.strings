@@ -1,0 +1,62 @@
+/* 
+  Localizable.strings
+  Common
+
+  Created by Александр Соломатов on 07/03/2019.
+  Copyright © 2019 Timur Elzhov. All rights reserved.
+*/
+
+/// Product Item
+"product_price" = "Buy %.2f PF";
+"alert_ok" = "OK";
+
+/// User Pages View Controller
+"balance_title" = "Balance";
+"balance_str" = "%.2f PF";
+"balance_license" = "License";
+"balance_settings" = "Settings";
+
+/// Login View Controller
+"login_info_lbl" = "Enter your credentials";
+"login_login_btn" = "LOG IN";
+"login_forgot_btn" = "Forgot password?";
+"login_reg_btn" = "REGISTER";
+"login_error_login_empty" = "Please, enter a login name";
+"login_error_login_valid" = "Login name must be a valid e-mail address";
+"login_error_password" = "Please, enter a password";
+"login_error_password_long" = "Password must be at least %d characters long";
+"login_login_lbl" = "Login (E-mail)";
+"login_pwd_lbl" = "Password";
+
+/// Register View Controller
+"reg_info_lbl" = "Account registration";
+"reg_signup_btn" = "SIGN UP";
+"reg_login_btn" = "LOG IN";
+
+/// PinCode View Controller
+"pin_info_create_lbl" = "Create your PIN code";
+"pin_info_enter_lbl" = "Enter your PIN code";
+"pin_forgot_btn" = "Forgot PIN code?";
+
+/// Setting View Controller
+"settings_rec_resolution" = "Recording resolution";
+"settings_show_fps" = "Show FPS";
+"settings_change_server_address" = "Change server address";
+"settings_how_to" = "How to use";
+"settings_use_fast_swype" = "Use fast swype code";
+"settings_invert_swype" = "Invert swype directions for facing camera";
+
+/// User Guide View Controller
+"guide_skip" = "SKIP";
+
+/// Wallet View Controller
+"wallet_info_lbl" = "PF marketplace";
+"wallet_info_desc" = "Proof mosaic is used to pay for blockchain transactions when creating verified video.\n\nYou can buy some Proof coins here";
+
+// Guide Pages
+
+"guide_step_1" = "Sign up or sign in to your account";
+"guide_step_2" = "Recharge your balance if needed";
+"guide_step_3" = "Continue filming";
+"guide_step_4" = "Finish filming and keep the file";
+"guide_step_5" = "For authentication, upload the file to the _product.prover.io_ validation service";

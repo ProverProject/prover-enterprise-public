@@ -2,7 +2,11 @@ import UIKit
 import StoreKit
 import PromiseKit
 
-open class BaseUserPagesViewController: BaseViewController {
+public protocol SettingsViewControllerDelegate: class {
+    func didSelect(_ cellType: SettingsCellType)
+}
+
+open class BaseUserPagesViewController: BaseViewController, SettingsViewControllerDelegate {
     
     private struct TabItem: Equatable {
         static func == (lhs: BaseUserPagesViewController.TabItem, rhs: BaseUserPagesViewController.TabItem) -> Bool {
@@ -49,18 +53,17 @@ open class BaseUserPagesViewController: BaseViewController {
     open override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = .white
+        
         configureButtonContainer()
         configureNavigationBackground()
-        configureTitleView()
         configureControllersContainer()
         configureScrollView()
         
         configureTabItems()
-    }
-    
-    private func configureTitleView() {
-        navigationItem.prompt = "Balance"
-        navigationItem.title = String(format: "%.2f PF", Double(0))
+        
+        navigationItem.prompt = Utils.localizeSelf("balance_title")
+        navigationItem.title = String(format: Utils.localizeSelf("balance_str"), Double(0))
     }
     
     override open func viewWillAppear(_ animated: Bool) {
@@ -76,18 +79,18 @@ open class BaseUserPagesViewController: BaseViewController {
         if openSettings {
             goToSettings()
         }
-
+        
         if !isFirstlyAppeared {
-            receiveAvailablePurchases()
+            refreshBalance()
             isFirstlyAppeared = true
         }
     }
     
     private func configureDataSource() -> [TabItem] {
-        let licenseItem = TabItem(withTitle: "License", andViewController: licenseViewController)
-        let settingsItem = TabItem(withTitle: "Settings", andViewController: settingsViewController)
+        let leftItem = TabItem(withTitle: Utils.localizeSelf("balance_license"), andViewController: licenseViewController)
+        let rightItem = TabItem(withTitle: Utils.localizeSelf("balance_settings"), andViewController: settingsViewController)
         
-        return [licenseItem, settingsItem]
+        return [leftItem, rightItem]
     }
     
     @objc private func changeController(_ sender: UIButton) {
@@ -99,10 +102,6 @@ open class BaseUserPagesViewController: BaseViewController {
             let xPoint = scrollView.frame.width*CGFloat(index)
             scrollView.setContentOffset(CGPoint(x: xPoint, y: 0), animated: true)
         }
-    }
-    
-    private func receiveAvailablePurchases() {
-        refreshBalance(navigationItem.rightBarButtonItem!.customView as! UIButton)
     }
     
     // MARK: - NavigationBar
@@ -135,7 +134,7 @@ open class BaseUserPagesViewController: BaseViewController {
         backButton.addTarget(self, action: #selector(backButtonAction), for: .touchUpInside)
         
         refreshButton.setImage(#imageLiteral(resourceName: "refresh"), for: .normal)
-        refreshButton.addTarget(self, action: #selector(refreshBalance), for: .touchUpInside)
+        refreshButton.addTarget(self, action: #selector(refreshBalanceAction), for: .touchUpInside)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: refreshButton)
@@ -145,17 +144,19 @@ open class BaseUserPagesViewController: BaseViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    @objc private func refreshBalance(_ sender: UIButton) {
+    @objc private func refreshBalanceAction(_ sender: UIButton) {
+        let entry = NetworkAPI.get_balance
+        
         sender.startRotating()
         
-        provider.promise(target: NetworkAPI.get_balance)
+        provider.promise(target: entry)
             .done { [weak self] (result: BalanceResponse) in
                 let balanceItem = result.balance.first(where: {
                     $0.mosaicId.namespaceId == .prover
                 })
 
                 let balance = balanceItem?.floatQuantity ?? 0
-                self?.navigationItem.title = String(format: "%.2f PF", balance)
+                self?.navigationItem.title = String(format: Utils.localizeSelf("balance_str"), balance)
             }.ensure { [weak self] in
                 if self != nil {
                     sender.stopRotating()
@@ -165,9 +166,13 @@ open class BaseUserPagesViewController: BaseViewController {
         }
     }
     
+    public func refreshBalance() {
+        refreshBalanceAction(navigationItem.rightBarButtonItem!.customView as! UIButton)
+    }
+    
     // MARK: - SettingsViewController selected methods
     private func changeBackendUrl() {
-        appWindow.setAuthRootViewController(animated: true)
+        appDelegate.setAuthRootViewController(animated: true)
     }
     
     private func showUserGuide() {
@@ -176,12 +181,26 @@ open class BaseUserPagesViewController: BaseViewController {
     }
     
     open func changeVideoQuality() { }
-
+    
     open func goToSettings() {
         guard let settingsTab = tabsDataSource.first(where: { $0.tabController is SettingsViewController }) else { return }
         changeController(settingsTab.tabButton)
     }
     
+    public func didSelect(_ cellType: SettingsCellType) {
+        switch cellType {
+        case .videoQuality:
+            changeVideoQuality()
+        case .changeBackendUrl:
+            changeBackendUrl()
+        case .howToUse:
+            showUserGuide()
+        case .showFps,
+             .useFastSwypeCode,
+             .invertSwypeCodeDirections:
+            break
+        }
+    }
 }
 
 // MARK: - Configure layout
@@ -192,7 +211,7 @@ extension BaseUserPagesViewController {
         view.addSubview(buttonsContainer)
         
         buttonsContainer.translatesAutoresizingMaskIntoConstraints = false
-        buttonsContainer.topAnchor.constraint(equalTo: self.layoutTopAnchor).isActive = true
+        buttonsContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
         buttonsContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         buttonsContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         buttonsContainer.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -294,20 +313,5 @@ extension BaseUserPagesViewController: UIScrollViewDelegate {
         let currentButton = tabsDataSource[scrollView.currentPage].tabButton
         tabsDataSource.filter({ $0.tabButton != currentButton }).forEach({ $0.tabButton.isSelected = false })
         currentButton.isSelected = true
-    }
-}
-
-extension BaseUserPagesViewController: SettingsViewControllerDelegate {
-    public func didSelect(_ cellType: SettingsCellType) {
-        switch cellType {
-        case .videoQuality:
-            changeVideoQuality()
-        case .changeBackendUrl:
-            changeBackendUrl()
-        case .howToUse:
-            showUserGuide()
-        case .showFps, .useFastSwypeCode:
-            break
-        }
     }
 }

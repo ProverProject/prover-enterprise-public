@@ -23,8 +23,7 @@ open class UserGuideViewController: BaseViewController, UIScrollViewDelegate {
     
     private lazy var skipButton: UIButton = {
         let button = UIButton()
-        button.setTitle("SKIP", for: .normal)
-        button.setTitle("FINISH", for: .selected)
+        button.setTitle(Utils.localizeSelf("guide_skip"), for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.addTarget(self, action: #selector(dismissButtonAction), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -52,7 +51,7 @@ open class UserGuideViewController: BaseViewController, UIScrollViewDelegate {
         
         view.layoutMargins = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
         view.backgroundColor = .white
-
+        
     }
     
     open override func viewWillAppear(_ animated: Bool) {
@@ -63,13 +62,12 @@ open class UserGuideViewController: BaseViewController, UIScrollViewDelegate {
     
     private func setupLayout() {
         self.view.addSubview(self.titleImageView)
-
+        
         self.titleImageView.topAnchor.constraint(equalTo: self.layoutTopAnchor, constant: 21).isActive = true
         self.titleImageView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
-
+    
     private func setupPageControlContainer() {
-        
         pageControlContainer = UIView()
         
         view.addSubview(pageControlContainer)
@@ -99,13 +97,14 @@ open class UserGuideViewController: BaseViewController, UIScrollViewDelegate {
         skipButton.trailingAnchor.constraint(equalTo: pageControlContainer.trailingAnchor).isActive = true
     }
     
-    @objc private func dismissButtonAction(_ sender: UIButton) {
+    @objc
+    private func dismissButtonAction(_ sender: UIButton) {
         navigationController!.popViewController(animated: true)
     }
     
     private func setupScrollView() {
         view.addSubview(scrollView)
-
+        
         scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         scrollView.topAnchor.constraint(equalTo: titleImageView.bottomAnchor).isActive = true
         scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
@@ -116,14 +115,14 @@ open class UserGuideViewController: BaseViewController, UIScrollViewDelegate {
         let imageSizes = pages.map { $0.image.size }
         let maxWidth = imageSizes.map { $0.width }.max() ?? 0
         let maxHeight = imageSizes.map { $0.height }.max() ?? 0
-
+        
         var prevPageTrailingAnchor = scrollView.leadingAnchor
         
         for page in pages {
             let pageView = UIView()
             let imageView = UIImageView(image: page.image)
             let titleLabel = UILabel()
-
+            
             scrollView.addSubview(pageView)
             
             imageView.contentMode = .center
@@ -131,36 +130,40 @@ open class UserGuideViewController: BaseViewController, UIScrollViewDelegate {
             pageView.translatesAutoresizingMaskIntoConstraints = false
             imageView.translatesAutoresizingMaskIntoConstraints = false
             titleLabel.translatesAutoresizingMaskIntoConstraints = false
-
+            
             pageView.addSubview(imageView)
             pageView.addSubview(titleLabel)
-
+            
             imageView.widthAnchor.constraint(equalToConstant: maxWidth).isActive = true
             imageView.heightAnchor.constraint(equalToConstant: maxHeight).isActive = true
             imageView.centerXAnchor.constraint(equalTo: pageView.centerXAnchor).isActive = true
             imageView.centerYAnchor.constraint(equalTo: pageView.centerYAnchor).isActive = true
-
+            
+            let fontSize = titleLabel.font.pointSize
+            
+            titleLabel.attributedText = page.title.simpleFormatting(
+                mediumFont: .systemFont(ofSize: fontSize),
+                boldFont: .boldSystemFont(ofSize: fontSize))
             titleLabel.numberOfLines = 0
             titleLabel.lineBreakMode = .byWordWrapping
-            titleLabel.text = page.title
             titleLabel.textAlignment = .center
-
+            
             titleLabel.centerXAnchor.constraint(equalTo: pageView.centerXAnchor).isActive = true
             titleLabel.widthAnchor.constraint(equalToConstant: 250).isActive = true
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24).isActive = true
-
+            
             if page == pages.last! {
                 pageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
             }
-
+            
             pageView.leadingAnchor.constraint(equalTo: prevPageTrailingAnchor).isActive = true
             pageView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
             pageView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
             pageView.heightAnchor.constraint(equalTo: scrollView.heightAnchor).isActive = true
             pageView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-
+            
             prevPageTrailingAnchor = pageView.trailingAnchor
-
+            
             if page == pages.last! {
                 pageView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
             }
@@ -169,6 +172,5 @@ open class UserGuideViewController: BaseViewController, UIScrollViewDelegate {
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = scrollView.currentPage
-        skipButton.isSelected = pageControl.currentPage == (pages.count - 1) 
     }
 }

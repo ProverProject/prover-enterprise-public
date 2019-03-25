@@ -1,7 +1,12 @@
 import UIKit
 
-public protocol SettingsViewControllerDelegate: class {
-    func didSelect(_ cellType: SettingsCellType)
+public enum SettingsCellType {
+    case videoQuality
+    case showFps
+    case changeBackendUrl
+    case howToUse
+    case useFastSwypeCode
+    case invertSwypeCodeDirections
 }
 
 open class SettingsViewController: UIViewController {
@@ -20,11 +25,11 @@ open class SettingsViewController: UIViewController {
     
     override open func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.commonSetup()
         // Do any additional setup after loading the view.
     }
-
+    
     override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -64,20 +69,25 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         lazyTableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         
         lazyTableView.translatesAutoresizingMaskIntoConstraints = false
-        lazyTableView.rowHeight = 60
+        lazyTableView.rowHeight = UITableView.automaticDimension
+        lazyTableView.estimatedRowHeight = 44
         lazyTableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 1)) // For remove last separator =)
         
         lazyTableView.delegate = self
         lazyTableView.dataSource = self
         
+        lazyTableView.registerCell(withCellClass: SettingsShowFpsCell.self)
         lazyTableView.registerCell(withCellClass: SettingsTableViewBaseCell.self)
         lazyTableView.registerCell(withCellClass: SettingsVideoQualityCell.self)
-        lazyTableView.registerCell(withCellClass: SettingsShowFpsCell.self)
-
+        
         if Settings.allowUserChooseSwypeType {
             lazyTableView.registerCell(withCellClass: SettingsUseFastSwypeCodeCell.self)
         }
-
+        
+        if Settings.allowUserInvertSwypeDirectionsForFacingCamera {
+            lazyTableView.registerCell(withCellClass: SettingsInvertSwypeDirectionsCell.self)
+        }
+        
         return lazyTableView
     }
     
@@ -93,9 +103,9 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeReusableCell(withCellClass: SettingsVideoQualityCell.self, for: indexPath) else {
                 return UITableViewCell()
             }
-            let vQuality = Settings.currentVideoOutputResolution
+            let vQuality = Settings.selectedVideoOutputResolution
             
-            cell.title = "Recording resolution"
+            cell.title = Utils.localizeSelf("settings_rec_resolution")
             cell.videoQuality = "\(vQuality.width)x\(vQuality.height)"
             
             return cell
@@ -104,7 +114,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            cell.title = "Show FPS"
+            cell.title = Utils.localizeSelf("settings_show_fps")
             
             return cell
         case .changeBackendUrl:
@@ -112,7 +122,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            cell.title = "Change server address"
+            cell.title = Utils.localizeSelf("settings_change_server_address")
             
             return cell
         case .howToUse:
@@ -120,16 +130,24 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
                 return UITableViewCell()
             }
             
-            cell.title = "How to use"
+            cell.title = Utils.localizeSelf("settings_how_to")
             
             return cell
         case .useFastSwypeCode:
             guard let cell = tableView.dequeReusableCell(withCellClass: SettingsUseFastSwypeCodeCell.self, for: indexPath) else {
                 return UITableViewCell()
             }
-
-            cell.title = "Use fast swype code"
-
+            
+            cell.title = Utils.localizeSelf("settings_use_fast_swype")
+            
+            return cell
+        case .invertSwypeCodeDirections:
+            guard let cell = tableView.dequeReusableCell(withCellClass: SettingsInvertSwypeDirectionsCell.self, for: indexPath) else {
+                return UITableViewCell()
+            }
+            
+            cell.title = Utils.localizeSelf("settings_invert_swype")
+            
             return cell
         }
     }

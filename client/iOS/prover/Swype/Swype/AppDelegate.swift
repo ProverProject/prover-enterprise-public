@@ -1,5 +1,6 @@
 import Foundation
 import UIKit
+import YandexMobileMetrica
 import Common
 
 @UIApplicationMain
@@ -24,6 +25,19 @@ public class AppDelegate: BaseAppDelegate {
         SharedSettings.shared.shouldAskForAccessToCamera = true
         SharedSettings.shared.shouldAskForAccessToMicrophone = true
         SharedSettings.shared.shouldAskForAccessToPhotosGallery = true
+        
+        let ymConfig = YMMYandexMetricaConfiguration(apiKey: "119ffa4c-8c51-4f26-beb0-a6551f72bb11")
+        YMMYandexMetrica.activate(with: ymConfig!)
+        
+        let bgImage = #imageLiteral(resourceName: "background").resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch)
+        let navBarAppearance = UINavigationBar.appearance()
+        
+        navBarAppearance.setBackgroundImage(bgImage, for: .default)
+        navBarAppearance.barStyle = .black
+        navBarAppearance.tintColor = .white
+        navBarAppearance.titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor : UIColor.white
+        ]
         
         return super.application(application, willFinishLaunchingWithOptions: launchOptions)
     }

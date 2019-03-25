@@ -1,0 +1,59 @@
+// CardView: Result - Swype
+"upload_res_done" = "Готово!";
+"upload_res_file_hash_string" = "Хэш файла:\n%@";
+"upload_res_request_on_string" = "Запрос swype кода:\n%@";
+"upload_res_submit_on_string" = "Хэш медиа данных подтвержден:\n%@";
+"upload_res_swype_code_string" = "Swype код: %@";
+"upload_res_swype_code_block_string" = "Номер блока swype-кода: %d";
+"upload_res_video_hash_string" = "Транзакция хэша видео: %@";
+"upload_res_swype_begin_end_string" = "Начало/окончание ввода swype-кода: %@";
+"upload_res_montage_string" = "Монтаж файла: %@";
+"upload_res_button_pdf_title" = "Загрузите .pdf сертификат";
+"upload_res_button_another_file_title" = "Загрузить другой файл";
+"upload_res_hash_found" = "Найден хэш файла";
+"upload_res_montage_not_found" = "не выявлен";
+"upload_res_swype_doesnt_reсognized" = "Файл был найден, но swype код не распознан";
+"upload_abort" = "Прервать";
+
+// CardView: Info
+"info_uploading" = "Загрузка...";
+"info_uploaded" = "Файл загружен";
+"info_upload_stated" = "Началась загрузка: %@";
+
+// Swype View Controller
+"swype_access_camera" = "Для снятия видео PROVER SwypeID необходим доступ к вашей камере..\n\nПожалуйста, перейдите в Настройки > PROVER Swype ID  и установите значение _ON_ для камеры.";
+"swype_access_mic" = "PROVER SwypeID необходим доступ к галерее для записи видео.\n\nПожалуйста, перейдите в Настройки > PROVER Swype ID и установите для Галереи значение _ON_.";
+
+"swype_alert_cancel" = "Отмена";
+"swype_alert_send" = "Отправить";
+"swype_alert_discard" = "Сбросить";
+"swype_alert_ok" = "OK";
+"swype_code_res" = "Swype код не введен";
+"swype_code_body_1" = "\n\nНажмите _Отправить_ для отправки хэша видео, но мы не сможем проверить время начала записи";
+"swype_code_body_2" = "\n\nНажмите _Сбросить_ для отмены отправки хэша видео. В этом случае мы не сможем ничего проверить";
+"swype_code_body_3" = "\n\nНажмите _Отмена_ для продолжения записи и ввода swype-кода";
+"swype_allow_access_title" = "Пожалуйста, разрешите доступ";
+"swype_allow_access_not_now" = "Позже";
+"swype_allow_access_settings" = "Настройки";
+"swype_fps" = "fps";
+
+// Swype Detector View
+"swype_det_circular" = "Не прерывайте видеосъёмку, сделайте круговое движение телефоном";
+"swype_det_wrong" = "Что-то пошло не так. Пожалуйста, попробуйте еще раз.";
+"swype_det_stop" = "Не передвигайте устройство";
+"swype_det_success" = "Swype код введен успешно";
+"swype_det_calc_hash" = "Расчет хэша видео";
+"swype_det_posted_to_blckchn" = "Видео отправлено в блокчейн";
+
+// Price
+"price_lbl" = "Стоимость:";
+
+// Guide Pages
+
+"guide_step_swype_1" = "Установите рекомендуемое качество видео";
+"guide_step_swype_2" = "Начните съёмку";
+"guide_step_swype_3" = "Для активации функции SWYPE ID сделайте круговое движение";
+"guide_step_swype_4" = "Введите swype код, перемещая телефон по направлению стелок, чтобы совместить круги";
+
+// Not Verified
+"not_verified_lbl" = "Ваше видео не было верифицировано!";

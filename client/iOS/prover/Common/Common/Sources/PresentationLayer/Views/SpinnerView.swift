@@ -11,7 +11,7 @@ public struct Pose {
     }
 }
 
-public class SpinnerView : UIView {
+public class SpinnerView: UIView {
     
     override public var layer: CAShapeLayer {
         return super.layer as! CAShapeLayer
@@ -22,7 +22,7 @@ public class SpinnerView : UIView {
     }
     
     private var arcRedColor: UIColor {
-        return UIColor(byteRed: 227, byteGreen: 30, byteBlue: 36, byteAlpha: 100)
+        return UIColor(byteRed: 227, byteGreen: 30, byteBlue: 36, byteAlpha: 255)
     }
     
     class var poses: [Pose] {

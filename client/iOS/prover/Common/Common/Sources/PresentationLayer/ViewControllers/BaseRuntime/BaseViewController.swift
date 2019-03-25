@@ -10,11 +10,15 @@ open class BaseViewController: UIViewController, AlertingViewController {
         return UIApplication.shared
     }
 
+    public var appDelegate: BaseAppDelegate {
+        return UIApplication.shared.delegate as! BaseAppDelegate
+    }
+    
     public var appWindow: UIWindow {
         return UIApplication.shared.delegate!.window!!
     }
 
-    public var notificationCenter: NotificationCenter {
+    private var notificationCenter: NotificationCenter {
         return NotificationCenter.default
     }
 
@@ -28,11 +32,27 @@ open class BaseViewController: UIViewController, AlertingViewController {
         }
     }
 
+    public var topAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return view.safeAreaLayoutGuide.topAnchor
+        } else {
+            return topLayoutGuide.bottomAnchor
+        }
+    }
+
+    public var bottomAnchor: NSLayoutYAxisAnchor {
+        if #available(iOS 11.0, *) {
+            return view.safeAreaLayoutGuide.bottomAnchor
+        } else {
+            return bottomLayoutGuide.topAnchor
+        }
+    }
+
     public lazy var provider = NetworkProvider()
 
     public func alert(_ message: String) {
         let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .cancel)
+        let okAction = UIAlertAction(title: Utils.localizeSelf("alert_ok"), style: .cancel)
 
         alertController.addAction(okAction)
         present(alertController, animated: true)
@@ -48,7 +68,9 @@ open class BaseViewController: UIViewController, AlertingViewController {
 
         //let moyaError = error as! MoyaError
 
-        print("[BaseViewController] requestFailed(): moyaError.errorDescription! = \(moyaError.errorDescription!)")
+        let moyaErrorDescription = moyaError.errorDescription!
+
+        print("[BaseViewController] requestFailed(): moyaError.errorDescription! = \(moyaErrorDescription)")
 
         let urlError = moyaError.urlError
         let urlErrorCode = urlError?.urlErrorCode
@@ -69,7 +91,11 @@ open class BaseViewController: UIViewController, AlertingViewController {
             print("[BaseViewController] requestFailed(): response = nil")
         }
 
-        alert(moyaError.errorDescription!)
+        if moyaErrorDescription.hasPrefix("wron"), moyaErrorDescription.hasSuffix("session_key") {
+            appDelegate.setAuthRootViewController(animated: true)
+        } else {
+            alert(moyaErrorDescription)
+        }
 
         //if !(urlErrorCode == .notConnectedToInternet || urlErrorCode == .cancelled) {
         //    alert(moyaError.errorDescription!)
@@ -80,15 +106,74 @@ open class BaseViewController: UIViewController, AlertingViewController {
         super.viewDidAppear(animated)
 
         if SharedSettings.shared.shouldAskForAccessToCamera {
-            AVCaptureDevice.requestAccess(for: .video) { _ in }
+            AVCaptureDevice.requestAccess(for: .video) { _ in
+            }
         }
 
         if SharedSettings.shared.shouldAskForAccessToMicrophone {
-            AVCaptureDevice.requestAccess(for: .audio) { _ in }
+            AVCaptureDevice.requestAccess(for: .audio) { _ in
+            }
         }
 
         if SharedSettings.shared.shouldAskForAccessToPhotosGallery {
-            PHPhotoLibrary.requestAuthorization { _ in }
+            PHPhotoLibrary.requestAuthorization { _ in
+            }
         }
+    }
+
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        addBackgroundNotificationObservers()
+    }
+
+    deinit {
+        removeBackgroundNotificationObservers()
+    }
+}
+
+extension BaseViewController {
+
+    @objc open func handleWillEnterForeground() { }
+    @objc open func handleDidEnterBackground() { }
+    @objc open func keyboardWillShow(notification: NSNotification) { }
+    @objc open func keyboardWillHide(notification: NSNotification) { }
+
+    private func addBackgroundNotificationObservers() {
+        
+        print("[BaseViewController] addBackgroundNotificationObservers()")
+        
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(handleWillEnterForeground),
+            name: UIApplication.willEnterForegroundNotification,
+            object: nil)
+        
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(handleDidEnterBackground),
+            name: UIApplication.didEnterBackgroundNotification,
+            object: nil)
+        
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+        
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
+    }
+    
+    private func removeBackgroundNotificationObservers() {
+        
+        print("[BaseViewController] removeBackgroundNotificationObservers()")
+        
+        notificationCenter.removeObserver(self, name: UIApplication.willEnterForegroundNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIApplication.didEnterBackgroundNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        notificationCenter.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }

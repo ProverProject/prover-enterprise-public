@@ -1,6 +1,6 @@
 import UIKit
 
-class TitleView: BaseNibView {
+class TitleView: NibView {
     
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!

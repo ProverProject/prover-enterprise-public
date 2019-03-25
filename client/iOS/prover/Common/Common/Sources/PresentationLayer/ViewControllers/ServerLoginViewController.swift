@@ -204,7 +204,7 @@ extension ServerLoginViewController: UITextFieldDelegate {
                     Settings.isBaseURLValidated = true
 
                     self?.isWaiting = false
-                    self?.appWindow.setMainRootViewController(animated: true)
+                    self?.appDelegate.setMainRootViewController(animated: true)
                 }
                 .catch { [weak self] error in
                     self?.isWaiting = false

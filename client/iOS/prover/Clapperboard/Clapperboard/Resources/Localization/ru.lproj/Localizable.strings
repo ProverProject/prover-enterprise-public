@@ -1,0 +1,22 @@
+/*
+ Localizable.strings
+ Clapperboard
+ 
+ Created by Александр Соломатов on 07/03/2019.
+ Copyright © 2019 Nordavind. All rights reserved.
+ */
+
+// Guide Pages
+
+"guide_step_clap_1" = "Введите текстовый комментарий к видео (он будет сохранен в блокчейн)";
+"guide_step_clap_2" = "Начните генерацию QR-кода (процесс занимает не более 1 минуты)";
+"guide_step_clap_3" = "Покажите QR-код крупным планом на любую цифровую камеру во время фото/видеосъёмки";
+
+// Price
+"price_str" = "Стоимость: %.2f PF";
+
+// Clapperboard View Controller
+"clp_request_qr" = "Запрос стоимости QR-кода";
+"clp_purchase_qr" = "Покупка QR-кода";
+"clp_download_qr" = "Загрузка QR-кода";
+"cpl_typetext_label" = "Введите текст";

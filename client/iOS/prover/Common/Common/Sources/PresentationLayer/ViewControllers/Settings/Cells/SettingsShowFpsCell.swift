@@ -1,21 +1,12 @@
 import UIKit
 
-class SettingsShowFpsCell: SettingsTableViewBaseCell {
+class SettingsShowFpsCell: SettingsSwitchCell {
 
-    private lazy var switchControl: UISwitch = {
-        let sw = UISwitch()
-        sw.isOn = Settings.showFps
-        sw.addTarget(self, action: #selector(switchAction), for: .valueChanged)
-        return sw
-    }()
-    
-    override func setupLayout() {
-        super.setupLayout()
-        
-        stackView.addArrangedSubview(switchControl)
+    override var switchInitValue: Bool {
+        return Settings.showFps
     }
-    
-    @objc private func switchAction(_ sender: UISwitch) {
+
+    override func switchAction(_ sender: UISwitch) {
         Settings.showFps = sender.isOn
     }
 }

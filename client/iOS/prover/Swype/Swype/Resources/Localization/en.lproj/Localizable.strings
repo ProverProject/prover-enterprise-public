@@ -1,0 +1,59 @@
+// CardView: Result - Swype
+"upload_res_done" = "Done!";
+"upload_res_file_hash_string" = "File hash:\n%@";
+"upload_res_request_on_string" = "Request swype-code on:\n%@";
+"upload_res_submit_on_string" = "Media hash submitted on:\n%@";
+"upload_res_swype_code_string" = "Swype-code: %@";
+"upload_res_swype_code_block_string" = "Swype code block number: %d";
+"upload_res_video_hash_string" = "Video hash transaction: %@";
+"upload_res_swype_begin_end_string" = "Swype code beginning/ending offset: %@";
+"upload_res_montage_string" = "File montage: %@";
+"upload_res_button_pdf_title" = "Download .pdf certificate";
+"upload_res_button_another_file_title" = "Try another file";
+"upload_res_hash_matched" = "File hash matched";
+"upload_res_montage_not_found" = "not found";
+"upload_res_swype_doesnt_recognized" = "File has been found, but swype-code did not recognized";
+"upload_abort" = "Abort";
+
+// CardView: Info
+"info_uploading" = "Uploading...";
+"info_uploaded" = "File uploaded";
+"info_upload_stated" = "Upload started: %@";
+
+// Swype View Controller
+"swype_access_camera" = "PROVER SwypeID needs access to your camera to take videos.\n\nPlease go to Settings > PROVER Swype ID and set Camera to ON.";
+"swype_access_mic" = "PROVER SwypeID needs access to photos to record videos.\n\nPlease go to Settings > PROVER Swype ID and set Photos to ON.";
+
+"swype_alert_cancel" = "Cancel";
+"swype_alert_send" = "Send";
+"swype_alert_discard" = "Discard";
+"swype_alert_ok" = "OK";
+"swype_code_res" = "Swype code not entered";
+"swype_code_body_1" = "\n\nPress _Send_ to send video hash as it is, but we won't be able to verify recording start time";
+"swype_code_body_2" = "\n\nPress _Discard_ in order not to send video hash. We won't be able to verify anything";
+"swype_code_body_3" = "\n\nPress _Cancel_ to continue recording and entering swype code";
+"swype_allow_access_title" = "Please allow access";
+"swype_allow_access_not_now" = "Not now";
+"swype_allow_access_settings" = "Settings";
+"swype_fps" = "fps";
+
+// Swype Detector View
+"swype_det_circular" = "Do not interrupt video recording, make a circular motion with the phone";
+"swype_det_wrong" = "Something went wrong. Please, try again.";
+"swype_det_stop" = "Stop moving device";
+"swype_det_success" = "Swype code entered successfully";
+"swype_det_calc_hash" = "Calculating video hash";
+"swype_det_posted_to_blckchn" = "Video hash has been posted to blockchain";
+
+// Price
+"price_lbl" = "Price:";
+
+// Guide Pages
+
+"guide_step_swype_1" = "Set up the required video quality";
+"guide_step_swype_2" = "Start filming";
+"guide_step_swype_3" = "To activate the SWYPE ID function, make a circular movement";
+"guide_step_swype_4" = "Enter swype-code moving the phone along the arrows to combine the circles";
+
+// Not Verified
+"not_verified_lbl" = "Your video has not been verified yet!";

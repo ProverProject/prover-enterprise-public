@@ -1,8 +1,8 @@
 import Foundation
 
 extension Bool {
-  
-  mutating func flip() {
-    self = !self
-  }
+    
+    mutating func flip() {
+        self = !self
+    }
 }

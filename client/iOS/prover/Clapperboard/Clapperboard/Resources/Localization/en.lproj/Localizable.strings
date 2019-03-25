@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Clapperboard
+
+  Created by Александр Соломатов on 07/03/2019.
+  Copyright © 2019 Nordavind. All rights reserved.
+*/
+
+// Guide Pages
+
+"guide_step_clap_1" = "Enter your explanatory comment (it will be saved in blockchain)";
+"guide_step_clap_2" = "Start the QR-code generation process (takes up to 1 minute)";
+"guide_step_clap_3" = "Show the QR-code in close-up to any digital camera during filming/photographing";
+
+// Price
+"price_str" = "Price: %.2f PF";
+
+// Clapperboard View Controller
+"clp_request_qr" = "Requesting QR-Code offer";
+"clp_purchase_qr" = "Purchasing QR-Code";
+"clp_download_qr" = "Downloading QR-Code";
+"cpl_typetext_label" = "Type text";

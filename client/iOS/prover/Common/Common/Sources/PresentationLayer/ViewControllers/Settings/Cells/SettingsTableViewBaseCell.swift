@@ -4,6 +4,8 @@ open class SettingsTableViewBaseCell: UITableViewCell {
 
     public lazy var titleLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.font = .systemFont(ofSize: 15)
         label.textColor = .black
         return label
@@ -39,15 +41,20 @@ open class SettingsTableViewBaseCell: UITableViewCell {
     }
     
     func setupLayout() {
+
         contentView.addSubview(stackView)
         
+        let margins = contentView.layoutMargins
+
+        contentView.layoutMargins = UIEdgeInsets(top: 16, left: margins.left, bottom: 16, right: margins.right)
+
+        let guide = contentView.layoutMarginsGuide
+
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let margins = contentView.layoutMarginsGuide
-        stackView.leadingAnchor.constraint(equalTo: margins.leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: margins.trailingAnchor).isActive = true
-        stackView.topAnchor.constraint(equalTo: margins.topAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: margins.bottomAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: guide.leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: guide.trailingAnchor).isActive = true
+        stackView.topAnchor.constraint(equalTo: guide.topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: guide.bottomAnchor).isActive = true
         
         stackView.addArrangedSubview(titleLabel)
     }

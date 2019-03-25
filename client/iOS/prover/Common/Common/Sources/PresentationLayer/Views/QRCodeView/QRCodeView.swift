@@ -1,6 +1,6 @@
 import UIKit
 
-class QRCodeView: BaseNibView {
+class QRCodeView: NibView {
     private let version = SharedSettings.shared.appVersion
     private let placeholderImage = #imageLiteral(resourceName: "symbol")
     

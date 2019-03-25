@@ -1,6 +1,6 @@
 import UIKit
 
-extension UITableView {
+public extension UITableView {
     func registerCell(nibName name: String) {
         self.register(UINib(nibName: name, bundle: nil), forCellReuseIdentifier: name)
     }

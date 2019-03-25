@@ -1,0 +1,62 @@
+/*
+ Localizable.strings
+ Common
+ 
+ Created by Александр Соломатов on 07/03/2019.
+ Copyright © 2019 Timur Elzhov. All rights reserved.
+ */
+
+/// Product Item
+"product_price" = "Купить %.2f PF";
+"alert_ok" = "OK";
+
+/// User Pages View Controller
+"balance_title" = "Баланс";
+"balance_str" = "%.2f PF"; // DO NOT TRANSLATE!!!
+"balance_license" = "Лицензия";
+"balance_settings" = "Настройки";
+
+/// Login View Controller
+"login_info_lbl" = "Введите свои учётные данные";
+"login_login_btn" = "ВОЙТИ";
+"login_forgot_btn" = "Забыли пароль?";
+"login_reg_btn" = "ЗАРЕГИСТРИРОВАТЬСЯ";
+"login_error_login_empty" = "Пожалуйста, введите логин";
+"login_error_login_valid" = "Логином должен быть действительный адрес электронной почты";
+"login_error_password" = "Пожалуйста, введите пароль";
+"login_error_password_long" = "Пароль должен содержать не менее %d символов";
+"login_login_lbl" = "Логин (E-mail)";
+"login_pwd_lbl" = "Пароль";
+
+/// Register View Controller
+"reg_info_lbl" = "Регистрация аккаунта";
+"reg_signup_btn" = "РЕГИСТРАЦИЯ";
+"reg_login_btn" = "ВОЙТИ";
+
+/// PinCode View Controller
+"pin_info_create_lbl" = "Создайте свой ПИН-код";
+"pin_info_enter_lbl" = "Введите ПИН-код";
+"pin_forgot_btn" = "Забыли ПИН-код?";
+
+/// Setting View Controller
+"settings_rec_resolution" = "Разрешение видео при записи";
+"settings_show_fps" = "Показать количество кадров в секунду";
+"settings_change_server_address" = "Изменить адрес сервера";
+"settings_how_to" = "Как использовать";
+"settings_use_fast_swype" = "Используйте быстрый ввод swype-код";
+"settings_invert_swype" = "Изменить направление ввода swype-кода для фронтальной камеры";
+
+/// User Guide View Controller
+"guide_skip" = "ЗАКРЫТЬ";
+
+/// Wallet View Controller
+"wallet_info_lbl" = "Торговая площадка PF";
+"wallet_info_desc" = "Мозаика Proof используется для оплаты блокчейн транзакций при создании заверенного видео.\n\nВы можете купить мозаику Proof здесь";
+
+// Guide Pages
+
+"guide_step_1" = "Зарегистрируйтесь или войдите в свой аккаунт";
+"guide_step_2" = "Пополните баланс, если это необходимо";
+"guide_step_3" = "Продолжайте съёмку";
+"guide_step_4" = "Завершите съёмку и сохраните файл";
+"guide_step_5" = "Для того, чтобы подтвердить подлинность видео, загрузите файл на сервис проверки _product.prover.io_";

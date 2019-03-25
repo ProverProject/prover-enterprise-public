@@ -12,7 +12,7 @@ public extension UIColor {
         self.init(red: CGFloat(byteRed) / 255,
                        green: CGFloat(byteGreen) / 255,
                        blue: CGFloat(byteBlue) / 255,
-                       alpha: CGFloat(byteAlpha) / 100)
+                       alpha: CGFloat(byteAlpha) / 255)
     }
     
     /// UIColor initialisation from hex string

@@ -1,6 +1,6 @@
 import UIKit
 
-class LicenseContainer: BaseNibView {
+class LicenseContainer: NibView {
     
     @IBOutlet weak var licenseNumberLabel: UILabel!    
     @IBOutlet weak var copyButton: UIButton!

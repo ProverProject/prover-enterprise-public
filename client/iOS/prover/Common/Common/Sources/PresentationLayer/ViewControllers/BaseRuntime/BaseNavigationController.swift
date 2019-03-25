@@ -24,12 +24,12 @@ public class BaseNavigationController: UINavigationController {
         super.viewDidLoad()
         
         // This needs to be in here, not in init
-        interactivePopGestureRecognizer?.delegate = self
+        //interactivePopGestureRecognizer?.delegate = self
     }
     
     deinit {
         delegate = nil
-        interactivePopGestureRecognizer?.delegate = nil
+        //interactivePopGestureRecognizer?.delegate = nil
     }
     
     // MARK: - Overrides

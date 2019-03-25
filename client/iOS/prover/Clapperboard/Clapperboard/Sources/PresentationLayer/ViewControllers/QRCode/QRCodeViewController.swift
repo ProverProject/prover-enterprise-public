@@ -15,8 +15,8 @@ class QRCodeViewController: UIViewController {
     private let placeholderImage = #imageLiteral(resourceName: "symbol")
     private lazy var qrCodeGenerator: QRGeneratorService = {
         let version = SharedSettings.shared.appVersion
-        let backColor: UIColor = version == .new ? .black : .clear
-        let frontColor: UIColor = version == .new ? .clear : .black
+        let backColor: UIColor = /*version == .new ? .black : .clear*/ .clear
+        let frontColor: UIColor = /*version == .new ? .clear : .black*/ .black
         
         let qrGenerator = QRGeneratorService(backColor: backColor, frontColor: frontColor)
         return qrGenerator
@@ -41,10 +41,6 @@ class QRCodeViewController: UIViewController {
     private var done = false
     private let version = SharedSettings.shared.appVersion
     
-    deinit {
-        debugPrint("DEINITED VC: ", self)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +49,8 @@ class QRCodeViewController: UIViewController {
         self.logoQRImage.contentMode = .center
         
         self.qrImage.alpha = 0.0
-        self.qrImage.tintColor = version == .new ? .white : UIColor(hexString: "3B3D47")
+        self.qrImage.backgroundColor = version == .new ? .white : .clear
+        self.qrImage.tintColor = /*version == .new ? .white : */UIColor(hexString: "3B3D47")
         self.qrText.alpha = 0.0
         self.qrText.textColor = version == .new ? .white : UIColor(hexString: "3B3D47")
         
@@ -88,7 +85,7 @@ class QRCodeViewController: UIViewController {
                 [.font: UIFont.boldSystemFont(ofSize: 21)]
         }
     }
-
+    
     /// QR Code generating
     ///
     /// - Parameter string: input text
@@ -101,7 +98,7 @@ class QRCodeViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.logoQRImage.alpha = 0.0
-        }) { (_) in
+        }, completion: { (_) in
             self.qrText.text = message
             
             self.qrImage.image = image.withRenderingMode(.alwaysTemplate)
@@ -118,7 +115,7 @@ class QRCodeViewController: UIViewController {
             }, completion: { (_) in
                 completion()
             })
-        }
+        })
     }
     
     public func generateTestQR(_ completion: @escaping () -> Void = {  }) {
@@ -128,7 +125,7 @@ class QRCodeViewController: UIViewController {
         
         UIView.animate(withDuration: 0.3, animations: {
             self.logoQRImage.alpha = 0.0
-        }) { (_) in
+        }, completion: { (_) in
             self.qrText.text = "qewrj jcjf gjdfsjg dfjh ;jdf;h jfgskhj "
             
             self.qrImage.image = image.withRenderingMode(.alwaysTemplate)
@@ -145,18 +142,18 @@ class QRCodeViewController: UIViewController {
             }, completion: { (_) in
                 completion()
             })
-        }
+        })
     }
 }
 
 // AVCaptureVideoDataOutputSampleBufferDelegate protocol and related methods
 extension QRCodeViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
-    private func setupAVCapture(){
+    private func setupAVCapture() {
         session.sessionPreset = AVCaptureSession.Preset.vga640x480
         guard let device = AVCaptureDevice
             .default(AVCaptureDevice.DeviceType.builtInWideAngleCamera,
                      for: .video,
-                     position: AVCaptureDevice.Position.back) else{
+                     position: AVCaptureDevice.Position.back) else {
                         return
         }
         captureDevice = device
@@ -164,7 +161,7 @@ extension QRCodeViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         done = true
     }
     
-    private func beginSession(){
+    private func beginSession() {
         var deviceInput: AVCaptureDeviceInput!
         do {
             deviceInput = try AVCaptureDeviceInput(device: captureDevice)
@@ -173,7 +170,7 @@ extension QRCodeViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
                 return
             }
             
-            if self.session.canAddInput(deviceInput){
+            if self.session.canAddInput(deviceInput) {
                 self.session.addInput(deviceInput)
             }
             
@@ -182,7 +179,7 @@ extension QRCodeViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
             videoDataOutputQueue = DispatchQueue(label: "VideoDataOutputQueue")
             videoDataOutput.setSampleBufferDelegate(self, queue:self.videoDataOutputQueue)
             
-            if session.canAddOutput(self.videoDataOutput){
+            if session.canAddOutput(self.videoDataOutput) {
                 session.addOutput(self.videoDataOutput)
             }
             
@@ -207,14 +204,14 @@ extension QRCodeViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     }
     
     // clean up AVCapture
-    private func stopCamera(){
+    private func stopCamera() {
         session.stopRunning()
         done = false
     }
     
-    private func convertImageFromCMSampleBufferRef(_ sampleBuffer:CMSampleBuffer) -> CIImage{
+    private func convertImageFromCMSampleBufferRef(_ sampleBuffer:CMSampleBuffer) -> CIImage {
         let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)!
-        let ciImage:CIImage = CIImage(cvImageBuffer: pixelBuffer)
+        let ciImage: CIImage = CIImage(cvImageBuffer: pixelBuffer)
         return ciImage
     }
 }
