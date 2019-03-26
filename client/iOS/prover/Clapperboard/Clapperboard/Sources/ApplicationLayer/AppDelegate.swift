@@ -8,7 +8,7 @@ public class AppDelegate: BaseAppDelegate {
 
     override public func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        SharedSettings.shared.appVersion = .new
+        //SharedSettings.shared.appVersion = .new
         SharedSettings.shared.iosApp = "clapperboard"
 
         SharedSettings.shared.guidePages = [

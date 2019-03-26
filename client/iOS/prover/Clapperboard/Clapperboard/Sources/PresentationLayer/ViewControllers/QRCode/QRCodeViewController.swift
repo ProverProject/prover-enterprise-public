@@ -15,8 +15,8 @@ class QRCodeViewController: UIViewController {
     private let placeholderImage = #imageLiteral(resourceName: "symbol")
     private lazy var qrCodeGenerator: QRGeneratorService = {
         let version = SharedSettings.shared.appVersion
-        let backColor: UIColor = /*version == .new ? .black : .clear*/ .clear
-        let frontColor: UIColor = /*version == .new ? .clear : .black*/ .black
+        let backColor: UIColor = version == .new ? .black : .clear
+        let frontColor: UIColor = version == .new ? .clear : .black
         
         let qrGenerator = QRGeneratorService(backColor: backColor, frontColor: frontColor)
         return qrGenerator
@@ -49,8 +49,7 @@ class QRCodeViewController: UIViewController {
         self.logoQRImage.contentMode = .center
         
         self.qrImage.alpha = 0.0
-        self.qrImage.backgroundColor = version == .new ? .white : .clear
-        self.qrImage.tintColor = /*version == .new ? .white : */UIColor(hexString: "3B3D47")
+        self.qrImage.tintColor = version == .new ? .white : UIColor(hexString: "3B3D47")
         self.qrText.alpha = 0.0
         self.qrText.textColor = version == .new ? .white : UIColor(hexString: "3B3D47")
         
@@ -85,7 +84,7 @@ class QRCodeViewController: UIViewController {
                 [.font: UIFont.boldSystemFont(ofSize: 21)]
         }
     }
-    
+
     /// QR Code generating
     ///
     /// - Parameter string: input text

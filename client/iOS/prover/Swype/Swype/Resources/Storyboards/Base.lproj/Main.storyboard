@@ -169,30 +169,6 @@
                                     <outlet property="titleLabel" destination="J1e-La-g0L" id="JqS-ny-Kn0"/>
                                 </connections>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QeB-yd-Sc2">
-                                <rect key="frame" x="309" y="592" width="46" height="46"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LL3-lH-eEi">
-                                        <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="3TT-cb-xCP"/>
-                                            <constraint firstAttribute="width" constant="46" id="m22-6i-zmX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <inset key="contentEdgeInsets" minX="8" minY="8" maxX="8" maxY="8"/>
-                                        <state key="normal" image="switch_camera"/>
-                                        <connections>
-                                            <action selector="switchCameraPositionButtonAction:" destination="E3s-0G-vsR" eventType="touchUpInside" id="upj-Ud-xze"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="LL3-lH-eEi" firstAttribute="leading" secondItem="QeB-yd-Sc2" secondAttribute="leading" id="Nbm-Kc-ZU7"/>
-                                    <constraint firstAttribute="bottom" secondItem="LL3-lH-eEi" secondAttribute="bottom" id="PPl-sb-AI4"/>
-                                    <constraint firstItem="LL3-lH-eEi" firstAttribute="top" secondItem="QeB-yd-Sc2" secondAttribute="top" id="UlA-oQ-NLU"/>
-                                    <constraint firstAttribute="trailing" secondItem="LL3-lH-eEi" secondAttribute="trailing" id="cim-Uj-DBg"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Lx-qz-hZa" userLabel="Wallet Button">
                                 <rect key="frame" x="131.5" y="36" width="112" height="48"/>
                                 <state key="normal" backgroundImage="wallet_button_background"/>
@@ -298,9 +274,7 @@
                             <constraint firstItem="lni-EA-DR2" firstAttribute="trailing" secondItem="2Lx-qz-hZa" secondAttribute="trailing" constant="-10" id="NQq-0D-E8p"/>
                             <constraint firstItem="TGK-5E-9TW" firstAttribute="leading" secondItem="eNL-aY-mVd" secondAttribute="leading" constant="22" id="OqD-2h-7c1"/>
                             <constraint firstItem="SHN-i0-ZdJ" firstAttribute="centerX" secondItem="XtG-15-3Lr" secondAttribute="centerX" id="Ptb-O5-bD7"/>
-                            <constraint firstItem="QeB-yd-Sc2" firstAttribute="trailing" secondItem="eNL-aY-mVd" secondAttribute="trailing" constant="-20" id="QTp-ol-kIl"/>
                             <constraint firstItem="sTC-Ia-NEP" firstAttribute="leading" secondItem="2Lx-qz-hZa" secondAttribute="trailing" constant="10" id="SxK-Qf-ehU"/>
-                            <constraint firstItem="QeB-yd-Sc2" firstAttribute="centerY" secondItem="SHN-i0-ZdJ" secondAttribute="centerY" id="Xgh-DE-U1H"/>
                             <constraint firstItem="3MW-Oi-nmB" firstAttribute="centerY" secondItem="2Lx-qz-hZa" secondAttribute="centerY" id="YzL-pu-tiw"/>
                             <constraint firstItem="o1V-eO-7pT" firstAttribute="top" secondItem="0dx-xG-3Pe" secondAttribute="top" id="a1q-fg-TvE"/>
                             <constraint firstItem="lni-EA-DR2" firstAttribute="leading" secondItem="cAl-Mi-600" secondAttribute="trailing" constant="10" id="a4h-BQ-Bct"/>
@@ -342,8 +316,6 @@
                         <outlet property="proverRotatingView" destination="o1V-eO-7pT" id="gr4-f7-wGe"/>
                         <outlet property="recordButton" destination="SHN-i0-ZdJ" id="G7a-OX-qbt"/>
                         <outlet property="settingsButton" destination="3MW-Oi-nmB" id="FNg-Vx-MIo"/>
-                        <outlet property="switchCameraPositionButton" destination="LL3-lH-eEi" id="OeT-Zh-DeM"/>
-                        <outlet property="switchCameraPositionHolder" destination="QeB-yd-Sc2" id="q2O-nn-hlg"/>
                         <outlet property="videoPreviewView" destination="gOj-HD-XuC" id="P3Q-dG-N0C"/>
                         <outlet property="walletButton" destination="2Lx-qz-hZa" id="RcN-lr-gQW"/>
                     </connections>
@@ -358,7 +330,6 @@
         <image name="prover_icon" width="40" height="40"/>
         <image name="settings" width="320" height="320"/>
         <image name="start_record" width="56" height="56"/>
-        <image name="switch_camera" width="30" height="30"/>
         <image name="swype_entered" width="187" height="85"/>
         <image name="wallet" width="19" height="18"/>
         <image name="wallet_button_background" width="47" height="48"/>

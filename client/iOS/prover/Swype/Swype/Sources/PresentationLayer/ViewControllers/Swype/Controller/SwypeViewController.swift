@@ -21,8 +21,6 @@ class SwypeViewController: BaseViewController, SuspendableStateMachine {
     @IBOutlet weak var detectorView: SwypeDetectorView!
     @IBOutlet weak var videoPreviewView: VideoPreviewView!
     @IBOutlet weak var recordButton: UIButton!
-    @IBOutlet weak var switchCameraPositionHolder: UIView!
-    @IBOutlet weak var switchCameraPositionButton: UIButton!
     @IBOutlet weak var walletButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var guideButton: UIButton!
@@ -76,10 +74,6 @@ class SwypeViewController: BaseViewController, SuspendableStateMachine {
     // MARK: - IBAction
     @IBAction func recordButtonAction(_ sender: UIButton) {
         switchState()
-    }
-    
-    @IBAction func switchCameraPositionButtonAction(_ sender: UIButton) {
-        videoProcessor.switchCameraPosition()
     }
     
     @IBAction func walletButtonAction(_ sender: UIButton) {
@@ -910,18 +904,15 @@ extension SwypeViewController {
         switch controllerState {
         case .requestingBalanceAndPriceOnAppearance,
              .readyToPurchaseSwypeCode:
-            switchCameraPositionButton.isHidden = false
             walletButton.isHidden = false
             settingsButton.isHidden = false
             guideButton.isHidden = false
         default:
-            switchCameraPositionButton.isHidden = true
             walletButton.isHidden = true
             settingsButton.isHidden = true
             guideButton.isHidden = true
         }
         
-        switchCameraPositionButton.isEnabled = true
         walletButton.isEnabled = true
         settingsButton.isEnabled = true
         guideButton.isEnabled = true
