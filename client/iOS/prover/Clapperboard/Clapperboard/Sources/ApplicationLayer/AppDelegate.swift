@@ -12,7 +12,7 @@ public class AppDelegate: BaseAppDelegate {
         SharedSettings.shared.iosApp = "clapperboard"
 
         SharedSettings.shared.guidePages = [
-            GuidePage(image: #imageLiteral(resourceName: "guide_1"), title: "Sign up or sign in to your account"),
+            GuidePage(image: #imageLiteral(resourceName: "guide_1"), title: "Login to private backend"),
             GuidePage(image: #imageLiteral(resourceName: "guide_2"), title: "Recharge your balance if needed"),
             GuidePage(image: #imageLiteral(resourceName: "guide_3"), title: "Enter your explanatory comment (it will be saved in blockchain)"),
             GuidePage(image: #imageLiteral(resourceName: "guide_4"), title: "Start the QR code generation process (takes up to 1 minute)"),

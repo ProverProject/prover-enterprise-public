@@ -4,7 +4,7 @@ open class LicenseViewController: BaseViewController {
     
     private lazy var licenseLabel: UILabel = {
         let lazyLicenseLabel = UILabel()
-        lazyLicenseLabel.text = "License number"
+        lazyLicenseLabel.text = Utils.localizeSelf("license_number")
         lazyLicenseLabel.sizeToFit()
         lazyLicenseLabel.numberOfLines = 0
         lazyLicenseLabel.textColor = CoreColors.lightGray.color

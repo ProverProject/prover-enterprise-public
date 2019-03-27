@@ -23,7 +23,7 @@ class ServerLoginViewController: BaseViewController {
 
     private lazy var credentialsLabel: UILabel = {
         let lazyCredentialsLabel = UILabel()
-        lazyCredentialsLabel.text = "Enter server address"
+        lazyCredentialsLabel.text = Utils.localizeSelf("server_enter_address")
         lazyCredentialsLabel.numberOfLines = 0
         lazyCredentialsLabel.textAlignment = .center
         lazyCredentialsLabel.textColor = CoreColors.lightGray.color
@@ -40,7 +40,7 @@ class ServerLoginViewController: BaseViewController {
     
     private lazy var guideButton: UIButton = {
         let lazyGuideButton = UIButton(type: .system)
-        lazyGuideButton.setTitle("Learn how to use the application", for: .normal)
+        lazyGuideButton.setTitle(Utils.localizeSelf("server_learn_how_to_use_app"), for: .normal)
         lazyGuideButton.setTitleColor(CoreColors.darkGray.color, for: .normal)
         lazyGuideButton.titleLabel?.font = UIFont(name: "Helvetica", size: 12.0)
         lazyGuideButton.titleLabel?.textAlignment = .center
@@ -54,7 +54,7 @@ class ServerLoginViewController: BaseViewController {
         lazyLogInButton.layer.cornerRadius = 2.0
         lazyLogInButton.layer.shouldRasterize = false
         lazyLogInButton.backgroundColor = CoreColors.darkGray.color
-        lazyLogInButton.setTitle("log in".uppercased(), for: .normal)
+        lazyLogInButton.setTitle(Utils.localizeSelf("server_login_btn"), for: .normal)
         lazyLogInButton.setTitleColor(.white, for: .normal)
         lazyLogInButton.titleLabel?.font = .systemFont(ofSize: 14.0)
         lazyLogInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -130,15 +130,15 @@ class ServerLoginViewController: BaseViewController {
         
         let isValidUrlRule: ValidationRule = {
             let url = URL(string: $0)
-            return url == nil ? "URL is not valid" : nil
+            return url == nil ? Utils.localizeSelf("server_error_invalid_url_format") : nil
         }
 
         let urlMustContainHostRule: ValidationRule = {
             let url = URL(string: $0)!
-            return url.host == nil ? "URL must contain host component" : nil
+            return url.host == nil ? Utils.localizeSelf("server_error_url_must_contain_host_component") : nil
         }
 
-        self.urlContainer.setContainerLabel("Private backend address")
+        self.urlContainer.setContainerLabel(Utils.localizeSelf("server_private_backend_address"))
         self.urlContainer.setValidationRules([isValidUrlRule, urlMustContainHostRule])
         self.setupURLContainerTextField()
     }

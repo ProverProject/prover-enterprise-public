@@ -35,6 +35,6 @@ class LicenseContainer: NibView {
     @objc
     private func copyButtonAction() {
         UIPasteboard.general.string = self.licenseNumberLabel.text
-        alertingViewController?.alert("The license ID has been copied")
+        alertingViewController?.alert(Utils.localizeSelf("license_number_copied"))
     }
 }

@@ -1,11 +1,3 @@
-/* 
-  Localizable.strings
-  Common
-
-  Created by Александр Соломатов on 07/03/2019.
-  Copyright © 2019 Timur Elzhov. All rights reserved.
-*/
-
 /// Product Item
 "product_price" = "Buy %.2f PF";
 "alert_ok" = "OK";
@@ -16,27 +8,19 @@
 "balance_license" = "License";
 "balance_settings" = "Settings";
 
-/// Login View Controller
-"login_info_lbl" = "Enter your credentials";
-"login_login_btn" = "LOG IN";
-"login_forgot_btn" = "Forgot password?";
-"login_reg_btn" = "REGISTER";
-"login_error_login_empty" = "Please, enter a login name";
-"login_error_login_valid" = "Login name must be a valid e-mail address";
-"login_error_password" = "Please, enter a password";
-"login_error_password_long" = "Password must be at least %d characters long";
-"login_login_lbl" = "Login (E-mail)";
-"login_pwd_lbl" = "Password";
+/// License
+"license_number" = "License number";
+"license_number_copied" = "The license number has been copied";
 
-/// Register View Controller
-"reg_info_lbl" = "Account registration";
-"reg_signup_btn" = "SIGN UP";
-"reg_login_btn" = "LOG IN";
+/// Server Login View Controller
+"server_enter_address" = "Enter server address";
+"server_learn_how_to_use_app" = "Learn how to use the application";
+"server_login_btn" = "LOG IN";
+"server_private_backend_address" = "Private backend address";
 
-/// PinCode View Controller
-"pin_info_create_lbl" = "Create your PIN code";
-"pin_info_enter_lbl" = "Enter your PIN code";
-"pin_forgot_btn" = "Forgot PIN code?";
+/// Server Login View Controller Errors
+"server_error_invalid_url_format" = "Invalid URL format";
+"server_error_url_must_contain_host_component" = "URL must contain host component";
 
 /// Setting View Controller
 "settings_rec_resolution" = "Recording resolution";
