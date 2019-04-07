@@ -12,13 +12,13 @@ public class NetworkProvider: Cancellable {
     public var isRequesting: Bool { return request != nil }
     public var isCancelled: Bool { return request?.isCancelled ?? false }
     
-    public func promise<TResponse: Decodable>(
+    public func rawPromise(
         target: NetworkAPI,
         queue: DispatchQueue? = nil,
-        progress: Moya.ProgressBlock? = nil) -> Promise<TResponse> {
+        progress: Moya.ProgressBlock? = nil) -> Promise<Moya.Response> {
         
         let targetPending = Promise<Moya.Response>.pending()
-        let targetPromise = map(moyaResponsePromise: targetPending.promise) as Promise<TResponse>
+        let targetPromise = targetPending.promise
         let targetResolver = targetPending.resolver
         
         createRequest(resolver: targetResolver, target: target, queue: queue, progress: progress)
@@ -26,8 +26,41 @@ public class NetworkProvider: Cancellable {
         return targetPromise
     }
     
-    private func map<TResponse: Decodable>(moyaResponsePromise: Promise<Moya.Response>) -> Promise<TResponse> {
-        let promise = moyaResponsePromise.map { response -> TResponse in
+    public func promise<TResponse: Decodable>(
+        target: NetworkAPI,
+        queue: DispatchQueue? = nil,
+        progress: Moya.ProgressBlock? = nil) -> Promise<TResponse> {
+        
+        let rp = rawPromise(target: target, queue: queue, progress: progress)
+        return rp.mapToDecodable() as Promise<TResponse>
+    }
+    
+    private func createRequest(
+        resolver: Resolver<Moya.Response>,
+        target: NetworkAPI,
+        queue: DispatchQueue? = nil,
+        progress: Moya.ProgressBlock? = nil) {
+        
+        let backgroundTaskID = UIApplication.shared.beginBackgroundTask()
+        
+        request = provider.request(target, callbackQueue: queue, progress: progress) { [weak self] result in
+            self?.request = nil
+            
+            switch result {
+            case let .success(response):
+                resolver.fulfill(response)
+            case let .failure(error):
+                resolver.reject(error)
+            }
+            
+            UIApplication.shared.endBackgroundTask(backgroundTaskID)
+        }
+    }
+}
+
+private extension Promise where T == Moya.Response {
+    func mapToDecodable<TResponse: Decodable>() -> Promise<TResponse> {
+        let promise = map { response -> TResponse in
             
             let dataString = String(data: response.data, encoding: .utf8)?.trimmingCharacters(in: .whitespacesAndNewlines)
                 ?? ""
@@ -82,27 +115,5 @@ public class NetworkProvider: Cancellable {
         }
         
         return promise
-    }
-    
-    private func createRequest(
-        resolver: Resolver<Moya.Response>,
-        target: NetworkAPI,
-        queue: DispatchQueue? = nil,
-        progress: Moya.ProgressBlock? = nil) {
-        
-        let backgroundTaskID = UIApplication.shared.beginBackgroundTask()
-        
-        request = provider.request(target, callbackQueue: queue, progress: progress) { [weak self] result in
-            self?.request = nil
-            
-            switch result {
-            case let .success(response):
-                resolver.fulfill(response)
-            case let .failure(error):
-                resolver.reject(error)
-            }
-            
-            UIApplication.shared.endBackgroundTask(backgroundTaskID)
-        }
     }
 }
