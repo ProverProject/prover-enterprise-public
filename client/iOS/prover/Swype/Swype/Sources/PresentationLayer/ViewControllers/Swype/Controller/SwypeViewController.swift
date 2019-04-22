@@ -904,18 +904,14 @@ extension SwypeViewController {
         switch controllerState {
         case .requestingBalanceAndPriceOnAppearance,
              .readyToPurchaseSwypeCode:
-            walletButton.isHidden = false
-            settingsButton.isHidden = false
             guideButton.isHidden = false
+            settingsButton.isHidden = false
+            walletButton.isEnabled = true
         default:
-            walletButton.isHidden = true
-            settingsButton.isHidden = true
             guideButton.isHidden = true
+            settingsButton.isHidden = true
+            walletButton.isEnabled = false
         }
-        
-        walletButton.isEnabled = true
-        settingsButton.isEnabled = true
-        guideButton.isEnabled = true
     }
 }
 

@@ -1,6 +1,6 @@
 import UIKit
 
-class VideoPreviewView: UIImageView {
+class VideoPreviewView: UIView {
     override class var layerClass: AnyClass {
         return AVCaptureVideoPreviewLayer.self
     }

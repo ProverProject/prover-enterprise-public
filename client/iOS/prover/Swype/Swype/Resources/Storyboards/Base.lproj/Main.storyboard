@@ -18,10 +18,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gOj-HD-XuC" customClass="VideoPreviewView" customModule="Swype" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qb1-C3-8cq" customClass="VideoPreviewView" customModule="Swype" customModuleProvider="target">
+                                <rect key="frame" x="-62.5" y="0.0" width="500" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qb1-C3-8cq" secondAttribute="height" multiplier="3:4" id="UQu-1P-ny2"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T7K-8V-I5z" customClass="SwypeDetectorView" customModule="Swype" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="84" width="375" height="359.5"/>
                                 <subviews>
@@ -263,8 +265,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="qb1-C3-8cq" firstAttribute="centerX" secondItem="XtG-15-3Lr" secondAttribute="centerX" id="0ly-m1-Be6"/>
                             <constraint firstItem="lni-EA-DR2" firstAttribute="centerY" secondItem="0dx-xG-3Pe" secondAttribute="centerY" id="4IU-Gy-5Rj"/>
                             <constraint firstItem="o1V-eO-7pT" firstAttribute="leading" secondItem="0dx-xG-3Pe" secondAttribute="leading" id="6Pb-52-hiA"/>
+                            <constraint firstItem="qb1-C3-8cq" firstAttribute="height" secondItem="XtG-15-3Lr" secondAttribute="height" id="BMR-en-a4U"/>
                             <constraint firstItem="T7K-8V-I5z" firstAttribute="top" secondItem="2Lx-qz-hZa" secondAttribute="bottom" id="Fiy-Qe-aLp"/>
                             <constraint firstItem="eNL-aY-mVd" firstAttribute="trailing" secondItem="3MW-Oi-nmB" secondAttribute="trailing" constant="18" id="I7Q-nU-8Fr"/>
                             <constraint firstItem="rQd-0K-qE3" firstAttribute="top" secondItem="SHN-i0-ZdJ" secondAttribute="bottom" constant="3" id="J95-EN-I8a"/>
@@ -281,18 +285,15 @@
                             <constraint firstItem="o1V-eO-7pT" firstAttribute="bottom" secondItem="0dx-xG-3Pe" secondAttribute="bottom" id="aF9-rb-PK1"/>
                             <constraint firstItem="rQd-0K-qE3" firstAttribute="centerX" secondItem="SHN-i0-ZdJ" secondAttribute="centerX" id="caU-0j-3bF"/>
                             <constraint firstItem="T7K-8V-I5z" firstAttribute="width" secondItem="eNL-aY-mVd" secondAttribute="width" id="dIB-Jk-hSO"/>
+                            <constraint firstItem="qb1-C3-8cq" firstAttribute="centerY" secondItem="XtG-15-3Lr" secondAttribute="centerY" id="dsa-Le-ZxR"/>
                             <constraint firstItem="cAl-Mi-600" firstAttribute="leading" secondItem="0dx-xG-3Pe" secondAttribute="trailing" constant="10" id="evX-Rv-UeX"/>
                             <constraint firstItem="2Ag-3F-IEA" firstAttribute="centerX" secondItem="eNL-aY-mVd" secondAttribute="centerX" id="fo3-Jz-tBc"/>
-                            <constraint firstAttribute="bottom" secondItem="gOj-HD-XuC" secondAttribute="bottom" id="fyn-C1-nqf"/>
                             <constraint firstItem="sTC-Ia-NEP" firstAttribute="centerY" secondItem="2Lx-qz-hZa" secondAttribute="centerY" id="mOs-M1-wKr"/>
                             <constraint firstItem="0dx-xG-3Pe" firstAttribute="centerY" secondItem="2Lx-qz-hZa" secondAttribute="centerY" id="o5T-NN-G78"/>
-                            <constraint firstAttribute="trailing" secondItem="gOj-HD-XuC" secondAttribute="trailing" id="paW-Lw-DIk"/>
                             <constraint firstItem="cAl-Mi-600" firstAttribute="centerY" secondItem="2Lx-qz-hZa" secondAttribute="centerY" id="qgS-UY-b0i"/>
                             <constraint firstItem="2Lx-qz-hZa" firstAttribute="leading" secondItem="0dx-xG-3Pe" secondAttribute="leading" constant="-4" id="roU-UI-FRS"/>
                             <constraint firstItem="FeI-or-Q3z" firstAttribute="bottom" secondItem="SHN-i0-ZdJ" secondAttribute="top" constant="-40" id="sk0-IB-N6j"/>
-                            <constraint firstItem="gOj-HD-XuC" firstAttribute="top" secondItem="XtG-15-3Lr" secondAttribute="top" id="tgC-fb-nWm"/>
                             <constraint firstItem="TGK-5E-9TW" firstAttribute="centerY" secondItem="2Lx-qz-hZa" secondAttribute="centerY" id="uo7-g0-G69"/>
-                            <constraint firstItem="gOj-HD-XuC" firstAttribute="leading" secondItem="XtG-15-3Lr" secondAttribute="leading" id="w20-Si-ms0"/>
                             <constraint firstItem="o1V-eO-7pT" firstAttribute="trailing" secondItem="0dx-xG-3Pe" secondAttribute="trailing" id="x2N-7c-W52"/>
                             <constraint firstItem="2Lx-qz-hZa" firstAttribute="centerX" secondItem="XtG-15-3Lr" secondAttribute="centerX" id="yUu-Qg-Dcx"/>
                             <constraint firstItem="2Ag-3F-IEA" firstAttribute="centerY" secondItem="eNL-aY-mVd" secondAttribute="centerY" id="zsU-ld-kD9"/>
@@ -316,7 +317,7 @@
                         <outlet property="proverRotatingView" destination="o1V-eO-7pT" id="gr4-f7-wGe"/>
                         <outlet property="recordButton" destination="SHN-i0-ZdJ" id="G7a-OX-qbt"/>
                         <outlet property="settingsButton" destination="3MW-Oi-nmB" id="FNg-Vx-MIo"/>
-                        <outlet property="videoPreviewView" destination="gOj-HD-XuC" id="P3Q-dG-N0C"/>
+                        <outlet property="videoPreviewView" destination="qb1-C3-8cq" id="hIR-UA-zVc"/>
                         <outlet property="walletButton" destination="2Lx-qz-hZa" id="RcN-lr-gQW"/>
                     </connections>
                 </viewController>
