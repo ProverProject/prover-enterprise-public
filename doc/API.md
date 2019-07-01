@@ -327,9 +327,9 @@ The Software DOES NOT provide any methods for uploading video files. Neither
 does The Software remove files in the upload directory. Management of files
 in the upload directory is OUT OF SCOPE. Period!
 
-All verify jobs are queued and executed asynchronously in background. Listing
-a job returns a unique "token" which should be used to receive the status of
-the particular job.
+All verify jobs are queued and executed asynchronously in background. When a
+job is queued, SHA-256 hash of the file is calculated and returned. Status of
+the particular job may be requested using the file hash.
 
 ### Parameters (list a job)
 
@@ -339,36 +339,18 @@ the particular job.
 
 ### Parameters (polling)
 
-- token - string returned by the first call.
+- filehash - string returned by the first call.
 
 ### Response (place job)
 
     {
       "result":
       {
-        "token": "26b0efa1"
+        "filehash": "a246429354f3caf66095e96387eb539f7658bc60bca2f70190eddce0ad4e9ec2"
       }
     }
 
-### Response (polling, job is still pending)
-
-    {
-      "result":
-      {
-        "status": "pending"
-      }
-    }
-
-### Response (polling, job is in progress)
-
-    {
-      "result":
-      {
-        "status": "running"
-      }
-    }
-
-### Response (polling, job is finished)
+### Response (job is finished)
 
     {
       "result":
@@ -404,7 +386,6 @@ the particular job.
           "blockHash": "b9f12f9ed883c4d918a9e93a8fd0af1957a9dddda4661435e4517b16f6912869"
         },
         "swypeCodeBeginOffset": 82.483,
-        "status": "success",
-        "mediaHash": "bdebbdb716084c15c1eba83ddbb7f8ef4051be74fb0292f0221484cbc1a8f243"
+        "status": "success"
       }
     }

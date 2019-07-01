@@ -132,11 +132,42 @@ Applicable to:
 - `submit-media-hash`
 - `submit-message`
 
-## -501 Invalid job token
+## -501 File open error
 
-Token provided to `verify-media` (`verify-prover-media`, `verify-clapperboard-media`)
-was not returned by the previous call to these RPC requests. It may happen also
-if the database was re-initialized.
+File provided to `verify-media` (`verify-prover-media`, `verify-clapperboard-media`)
+can't be opened (doesn't exist, no permissions etc).
+
+Applicable to:
+
+- `verify-media`
+- `verify-prover-media`
+- `verify-clapperboard-media`
+
+## -502 File read error
+
+File provided to `verify-media` (`verify-prover-media`, `verify-clapperboard-media`)
+can't be read (due to I/O error, for example).
+
+Applicable to:
+
+- `verify-media`
+- `verify-prover-media`
+- `verify-clapperboard-media`
+
+## -503 Unknown file hash
+
+Hash provided to `verify-media` (`verify-prover-media`, `verify-clapperboard-media`)
+doesn't match any file previously queued for verification.
+
+Applicable to:
+
+- `verify-media`
+- `verify-prover-media`
+- `verify-clapperboard-media`
+
+## -504 Job is pending
+
+The job specified by the file hash is not finished yet.
 
 Applicable to:
 
