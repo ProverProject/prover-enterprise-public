@@ -17,6 +17,8 @@ Only the following HTTP error codes are used:
   10000 bytes (it's more than enough for all implemented requests).
 - "`415 Unsupported Media Type`" is used when content type is not
   `application/x-www-form-urlencoded`.
+- "`500 Internal Server Error`" is used when something unexpected happens
+  during the request execution.
 
 All other errors are returned as JSON objects within "`200 OK`" HTTP responses.
 
