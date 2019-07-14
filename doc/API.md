@@ -321,7 +321,7 @@ may be called several times.
 ## /ent/v1/verify-clapperboard-media
 ## /ent/v1/verify-media
 
-All there requests do exactly the same. The actual name doesn't matter. First
+All these requests do exactly the same. The actual name doesn't matter. First
 two variants are preserved for backward compatibility and may be removed in the
 future.
 
@@ -390,4 +390,21 @@ the particular job may be requested using the file hash.
         "swypeCodeBeginOffset": 82.483,
         "status": "success"
       }
+    }
+
+## /local/api/unlock
+
+This RPC method is accessible at the TCP same port as the local web GUI (7898
+by default). It accepts the current password (as a plain text) and unlocks the
+key store. It's used internally by the local web GUI, but may also be used
+by the system administrator to "boot" the server at the system startup.
+
+### Parameters
+
+- password - current password.
+
+### Response (place job)
+
+    {
+      "result": null
     }

@@ -72,6 +72,14 @@ Applicable to:
 - `submit-media-hash`
 - `submit-message`
 
+## -203 Wrong password
+
+The password given in RPC request is wrong.
+
+Applicable to:
+
+- `/local/api/unlock`
+
 ## -301 Index is not up-to-date
 
 Indexing is not finished or can't be performed now.
